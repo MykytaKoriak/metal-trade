@@ -1,0 +1,20 @@
+.tagline {
+  display: flex;
+
+  &-container {
+    width: $container-width;
+    margin: 114px auto;
+  }
+
+  &-text {
+    font-family: 'FuturaPT', Arial, sans-serif;
+    color: #080808;
+    font-size: 120px;
+    line-height: 1;
+
+    span {
+      display: block;
+      width: 100%;
+    }
+  }
+}

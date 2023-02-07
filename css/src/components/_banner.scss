@@ -1,0 +1,26 @@
+.banner {
+  background-image: url("https://www.metaltechnc.com/images/Machine%20Shop.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  &-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    &-tagline {
+      margin: 24% auto 0 auto;
+      padding-left: 60px;
+      width: $container-width;
+      font-size: 88px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-family: 'FuturaPT', Arial, sans-serif;
+      line-height: 1.2;
+    }
+  }
+}
