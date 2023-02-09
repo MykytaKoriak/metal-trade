@@ -29,3 +29,6 @@ $fixed-header-width: 1300px;
 @media screen and (max-width: 566px) {
   $fixed-header-width: 1180px;
 }
+
+$free-space: calc(100vh - $container-width);
+$side-margin: calc( $free-space / 2)
