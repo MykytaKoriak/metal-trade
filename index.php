@@ -46,6 +46,33 @@
         </div>
     </div>
 </div>
+
+<div class="about">
+    <div class="about-image" style="background-image: url('https://static.wixstatic.com/media/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg/v1/fill/w_577,h_612,al_c,q_80,enc_auto/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg')">
+
+    </div>
+    <div class="about-content">
+        <div class="about-content-container">
+            <div class="about-content-title">
+                About Our Company
+            </div>
+            <div class="about-content-description">
+                MK Trading LLC는 2015년 Phoenix, AZ에서 설립이 되었으며, 2019년도에 LA로 Main Office를 옮겼습니다. Metal Scrap 수출, 수입을 전문적으로 취급하며, 한국 & 동남아 & 중동 기업들과 거래를 주로 하고 있습니다.
+                <br>
+                <br>
+                신뢰와 정직을 기반으로 철강, 비철 그리고 물류에 종사하는 파트너들과의 지속적인 긴밀한 관계로 세계적인 Metal Scrap 회사로 성장 중입니다.
+                <br>
+                <br>
+                MK Trading LLC was established in Phoenix, AZ in 2015 and moved to LA in 2019. We are specialized in metal scrap exporting and importing, and mainly deals with companies in Korea. We are also trading with Southeast Asian and Middle Eastern countries.
+                <br>
+                <br>
+                Based on trust and honesty, it is growing into a world-class metal scrap company due to its continuous close relationship with its partners in steel, non-ferrous and logistic
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="services">
     <div class="services-container">
         <a href="#" class="services-block services-block__right"  style="background-image: url('https://kosmomachine.com/wp-content/uploads/2017/09/KOS_interior-panoramic-1200x445.jpg')">
@@ -81,31 +108,6 @@
     </div>
 </div>
 
-<div class="about">
-    <div class="about-image" style="background-image: url('https://static.wixstatic.com/media/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg/v1/fill/w_577,h_612,al_c,q_80,enc_auto/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg')">
-
-    </div>
-    <div class="about-content">
-        <div class="about-content-container">
-            <div class="about-content-title">
-                About Our Company
-            </div>
-            <div class="about-content-description">
-                MK Trading LLC는 2015년 Phoenix, AZ에서 설립이 되었으며, 2019년도에 LA로 Main Office를 옮겼습니다. Metal Scrap 수출, 수입을 전문적으로 취급하며, 한국 & 동남아 & 중동 기업들과 거래를 주로 하고 있습니다.
-                <br>
-                <br>
-                신뢰와 정직을 기반으로 철강, 비철 그리고 물류에 종사하는 파트너들과의 지속적인 긴밀한 관계로 세계적인 Metal Scrap 회사로 성장 중입니다.
-                <br>
-                <br>
-                MK Trading LLC was established in Phoenix, AZ in 2015 and moved to LA in 2019. We are specialized in metal scrap exporting and importing, and mainly deals with companies in Korea. We are also trading with Southeast Asian and Middle Eastern countries.
-                <br>
-                <br>
-                Based on trust and honesty, it is growing into a world-class metal scrap company due to its continuous close relationship with its partners in steel, non-ferrous and logistic
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <div class="contact">
     <div class="contact-content">
@@ -123,6 +125,12 @@
                 +1 602 366 5960
             </div>
             <div class="contact-content-info-social">
+                <a href="#" class="contact-content-info-social-icon">
+
+                </a>
+                <a href="#" class="contact-content-info-social-icon">
+
+                </a>
                 <a href="#" class="contact-content-info-social-icon">
 
                 </a>
