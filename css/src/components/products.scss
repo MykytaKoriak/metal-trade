@@ -1,0 +1,39 @@
+.products {
+  &-container {
+    width: $container-width;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &-element {
+    height: 290px;
+    width: 30%;
+    margin-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 5%;
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+
+    &-content {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      &-title {
+        padding: 50px;
+        color: #FFFFFF;
+        font-size: 26px;
+        font-weight: 400;
+        font-family: "FuturaPT", Arial, sans-serif;
+      }
+    }
+  }
+}
