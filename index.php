@@ -20,7 +20,16 @@
     </div>
 </div>
 
-<div class="banner">
+<div class="fixed-header fixed-header__hidden">
+    <a href="" class="fixed-header-logo">
+        <!--            <img src="" alt="">-->
+    </a>
+    <div class="fixed-header-burger">
+
+    </div>
+</div>
+
+<div id="banner" class="banner">
     <div class="banner-container">
         <div class="banner-container-tagline">
             Робимо якісно і надійно
@@ -39,7 +48,7 @@
 </div>
 <div class="services">
     <div class="services-container">
-        <div class="services-block services-block__right"  style="background-image: url('https://kosmomachine.com/wp-content/uploads/2017/09/KOS_interior-panoramic-1200x445.jpg')">
+        <a href="#" class="services-block services-block__right"  style="background-image: url('https://kosmomachine.com/wp-content/uploads/2017/09/KOS_interior-panoramic-1200x445.jpg')">
             <div class="services-block-content">
                 <div class="services-block-content-title">
                     ТОРГОВЕЛЬНЕ ОБЛАДНАННЯ
@@ -48,8 +57,8 @@
                     Ми поставляємо торговельне обладнання відомих брендів та створюємо власне обладнання для потреб клієнтів
                 </div>
             </div>
-        </div>
-        <div class="services-block services-block__left"  style="background-image: url('https://kosmomachine.com/wp-content/uploads/2017/09/KOS_interior-panoramic-1200x445.jpg')">
+        </a>
+        <a href="#"  class="services-block services-block__left"  style="background-image: url('https://kosmomachine.com/wp-content/uploads/2017/09/KOS_interior-panoramic-1200x445.jpg')">
             <div class="services-block-content">
                 <div class="services-block-content-title">
                     ТОРГОВЕЛЬНЕ ОБЛАДНАННЯ
@@ -58,8 +67,8 @@
                     Ми поставляємо торговельне обладнання відомих брендів та створюємо власне обладнання для потреб клієнтів
                 </div>
             </div>
-        </div>
-        <div class="services-block services-block__right"  style="background-image: url('https://kosmomachine.com/wp-content/uploads/2017/09/KOS_interior-panoramic-1200x445.jpg')">
+        </a>
+        <a href="#"  class="services-block services-block__right"  style="background-image: url('https://kosmomachine.com/wp-content/uploads/2017/09/KOS_interior-panoramic-1200x445.jpg')">
             <div class="services-block-content">
                 <div class="services-block-content-title">
                     ТОРГОВЕЛЬНЕ ОБЛАДНАННЯ
@@ -67,95 +76,11 @@
                 <div class="services-block-content-text">
                     Ми поставляємо торговельне обладнання відомих брендів та створюємо власне обладнання для потреб клієнтів
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="projects">
-    <div class="projects-title">
-        Проекти
-    </div>
-    <div class="projects-list">
-        <div class="projects-list-block">
-            <div class="projects-list-block-image">
-
-            </div>
-            <div class="projects-list-block-title">
-
-            </div>
-            <div class="projects-list-block-content">
-
-            </div>
-            <a href="#" class="projects-list-block-more">
-
-            </a>
-        </div>
-        <div class="projects-list-block">
-            <div class="projects-list-block-image">
-
-            </div>
-            <div class="projects-list-block-title">
-
-            </div>
-            <div class="projects-list-block-content">
-
-            </div>
-            <a href="#" class="projects-list-block-more">
-
-            </a>
-        </div>
-        <div class="projects-list-block">
-            <div class="projects-list-block-image">
-
-            </div>
-            <div class="projects-list-block-title">
-
-            </div>
-            <div class="projects-list-block-content">
-
-            </div>
-            <a href="#" class="projects-list-block-more">
-
-            </a>
-        </div>
-        <div class="projects-list-block">
-            <div class="projects-list-block-image">
-
-            </div>
-            <div class="projects-list-block-title">
-
-            </div>
-            <div class="projects-list-block-content">
-
-            </div>
-            <a href="#" class="projects-list-block-more">
-
-            </a>
-        </div>
-    </div>
-    <div class="projects-more">
-
-    </div>
-</div>
-
-<div class="blog">
-    <div class="blog-list">
-        <a href="#" class="blog-list-block">
-            <div class="blog-list-block-image">
-
-            </div>
-            <div class="blog-list-block-title">
-
-            </div>
-            <div class="blog-list-block-content">
-
-            </div>
-            <div class="blog-list-block-date">
-
             </div>
         </a>
     </div>
 </div>
+
 
 
 <div class="footer"></div>

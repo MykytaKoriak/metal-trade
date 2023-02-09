@@ -13,3 +13,19 @@ $container-width: 1200px;
 @media screen and (max-width: 566px) {
   $container-width: 1180px;
 }
+
+$fixed-header-width: 1300px;
+
+@media screen and (max-width: 1199px) {
+  $fixed-header-width: 1180px;
+}
+@media screen and (max-width: 991px) {
+  $fixed-header-width: 1180px;
+}
+@media screen and (max-width: 767px) {
+  $fixed-header-width: 1180px;
+}
+
+@media screen and (max-width: 566px) {
+  $fixed-header-width: 1180px;
+}

@@ -1,0 +1,32 @@
+.fixed-header {
+  position: fixed;
+  width: 97%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+  transition: 1s;
+
+  &-logo {
+    background-color: #0A246A;
+    width: 150px;
+    height: 42px;
+    margin-left: 28px;
+  }
+
+  &-burger {
+    background-color: #0A246A;
+    width: 60px;
+    height: 40px;
+  }
+
+  &__hidden {
+    top: -200px;
+  }
+
+}
