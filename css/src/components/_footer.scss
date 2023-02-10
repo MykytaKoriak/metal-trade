@@ -1,0 +1,118 @@
+.footer {
+  background-color: #080808;
+  color: #FFFFFF;
+  font-family: 'FuturaPT', 'Arial', sans-serif;
+
+  &-container {
+    width: $container-width;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &-content {
+    width: 50%;
+
+    &-tagline {
+      color: #606366;
+      text-decoration: none;
+      font-size: 26px;
+      font-family: 'FuturaPT', Arial, sans-serif;
+      line-height: 1.55;
+      font-weight: 400;
+      background-position: center center;
+      border-color: transparent;
+      border-style: solid;
+      margin-bottom: 60px;
+    }
+
+    &-map {
+      &-title {
+        color: #606366;
+        text-decoration: none;
+        font-size: 26px;
+        font-family: 'FuturaPT', Arial, sans-serif;
+        line-height: 1.55;
+        font-weight: 400;
+        background-position: center center;
+        border-color: transparent;
+        border-style: solid;
+        margin-bottom: 30px;
+
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 70%;
+
+        &-item {
+          width: 50%;
+          margin-bottom: 20px;
+          font-size: 26px;
+
+          &-link {
+            color: #FFFFFF;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-contacts {
+    width: 30%;
+
+    &-person {
+      display: flex;
+      flex-direction: column;
+
+      &-phone {
+        color: #FFFFFF;
+        text-decoration: none;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      &-email {
+        color: #FFFFFF;
+        text-decoration: none;
+        margin-bottom: 50px;
+        font-size: 24px;
+      }
+    }
+
+    &-social {
+      &-title {
+        color: #606366;
+        text-decoration: none;
+        font-size: 26px;
+        font-family: 'FuturaPT', Arial, sans-serif;
+        line-height: 1.55;
+        font-weight: 400;
+        background-position: center center;
+        border-color: transparent;
+        border-style: solid;
+        margin-bottom: 30px;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+
+
+        &-item {
+          color: #FFFFFF;
+          text-decoration: none;
+          margin-bottom: 20px;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

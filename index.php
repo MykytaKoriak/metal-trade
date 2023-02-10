@@ -19,6 +19,48 @@
         </div>
     </div>
 </div>
+<div class="top-menu">
+    <div class="top-menu-container">
+        <div class="top-menu-links">
+            <a href="#" class="top-menu-links-item top-menu-links-item-logo">
+
+            </a>
+            <a href="#" class="top-menu-links-item">
+                Про нас
+            </a>
+            <a href="#" class="top-menu-links-item">
+                Послуги
+            </a>
+            <a href="#" class="top-menu-links-item">
+                Товари
+            </a>
+            <a href="#" class="top-menu-links-item">
+                Контакти
+            </a>
+
+        </div>
+        <div class="top-menu-social">
+            <div class="top-menu-social-list">
+                <a href="#" class="top-menu-social-list-item">
+
+                </a>
+                <a href="#" class="top-menu-social-list-item">
+
+                </a>
+                <a href="#" class="top-menu-social-list-item">
+
+                </a>
+            </div>
+            <div class="top-menu-social-phones">
+                <a href="#" class="top-menu-social-phones-item">+380 505777777</a>
+                <a href="#" class="top-menu-social-phones-item">+380 505777777</a>
+            </div>
+        </div>
+        <div class="top-menu-close">
+
+        </div>
+    </div>
+</div>
 
 <div class="fixed-header fixed-header__hidden">
     <a href="" class="fixed-header-logo">
@@ -121,56 +163,64 @@
 
 <div class="products">
     <div class="products-container">
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
                 </div>
             </div>
         </div>
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
                 </div>
             </div>
         </div>
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
                 </div>
             </div>
         </div>
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
                 </div>
             </div>
         </div>
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
                 </div>
             </div>
         </div>
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
                 </div>
             </div>
         </div>
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
                 </div>
             </div>
         </div>
-        <div class="products-element" style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
+        <div class="products-element"
+             style="background-image: url('https://static.wixstatic.com/media/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg/v1/fill/w_292,h_292,fp_0.50_0.50,q_90,enc_auto/185bf5_2d1b6287cfda479d9cfe79fe7c172562~mv2.jpg')">
             <div class="products-element-content">
                 <div class="products-element-content-title">
                     Металевi лiжка
@@ -217,7 +267,67 @@
     </div>
 </div>
 
-<div class="footer"></div>
+<footer id="footer" class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-content-tagline">
+                Ми допомагаємо бізнесу створити своє обличчя або оновитися і рости!
+            </div>
+            <div class="footer-content-map">
+                <div class="footer-content-map-title">
+                    Карта сайту
+                </div>
+                <div class="footer-content-map-list">
+                    <div class="footer-content-map-list-item">
+                        <a href="#" class="footer-content-map-list-item-link">
+                            ГОЛОВНА
+                        </a>
+                    </div>
+                    <div class="footer-content-map-list-item">
+                        <a href="#" class="footer-content-map-list-item-link">
+                            ГОЛОВНА
+                        </a>
+                    </div>
+                    <div class="footer-content-map-list-item">
+                        <a href="#" class="footer-content-map-list-item-link">
+                            ГОЛОВНА
+                        </a>
+                    </div>
+                    <div class="footer-content-map-list-item">
+                        <a href="#" class="footer-content-map-list-item-link">
+                            ГОЛОВНА
+                        </a>
+                    </div>
+                    <div class="footer-content-map-list-item">
+                        <a href="#" class="footer-content-map-list-item-link">
+                            ГОЛОВНА
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-contacts">
+            <div class="footer-contacts-person">
+                <a href="#" class="footer-contacts-person-phone">
+                    +1 602 366 5960
+                </a>
+                <a href="#" class="footer-contacts-person-email">
+                    Export@MKmetaltrading.com
+                </a>
+            </div>
+            <div class="footer-contacts-social">
+                <div class="footer-contacts-social-title">
+                    Social media
+                </div>
+                <div class="footer-contacts-social-list">
+                    <a href="#" class="footer-contacts-social-list-item">LinkedIn</a>
+                    <a href="#" class="footer-contacts-social-list-item">Facebook</a>
+                    <a href="#" class="footer-contacts-social-list-item">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <?php include('footer.php'); ?>
 
 </body>

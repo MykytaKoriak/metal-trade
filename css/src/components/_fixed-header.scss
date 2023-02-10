@@ -20,9 +20,16 @@
   }
 
   &-burger {
-    background-color: #0A246A;
-    width: 60px;
+    background-image: url("/img/hamburger.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
     height: 40px;
+
+    &-open {
+      background-image: url("/img/close.png");
+    }
   }
 
   &__hidden {
