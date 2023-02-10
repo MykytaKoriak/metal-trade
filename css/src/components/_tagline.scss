@@ -2,7 +2,7 @@
   display: flex;
 
   &-container {
-    width: $container-width;
+    @include container-width();
     margin: 114px auto;
   }
 

@@ -4,7 +4,7 @@
   font-family: 'FuturaPT', 'Arial', sans-serif;
 
   &-container {
-    width: $container-width;
+    @include container-width();
     margin: auto;
     padding-top: 120px;
     padding-bottom: 120px;

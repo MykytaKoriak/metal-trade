@@ -1,34 +1,42 @@
+@media screen and (max-width: 566px) {
+  $container-width: 80%;
+}
+
+@media screen and (max-width: 767px) {
+  $container-width: 540px;
+}
+
+@media screen and (max-width: 991px) {
+  $container-width: 720px;
+}
+
+@media screen and (max-width: 1199px) {
+  $container-width: 960px;
+}
+
+@media screen and (min-width: 1199px) {
+  $container-width: 960px;
+}
+
 $container-width: 1200px;
 
+$fixed-header-width: 1200px;
+
 @media screen and (max-width: 1199px) {
-  $container-width: 1180px;
+  $fixed-header-width: 960px;
 }
+
 @media screen and (max-width: 991px) {
-  $container-width: 1180px;
+  $fixed-header-width: 720px;
 }
+
 @media screen and (max-width: 767px) {
-  $container-width: 1180px;
+  $fixed-header-width: 540px;
 }
 
 @media screen and (max-width: 566px) {
-  $container-width: 1180px;
+  $fixed-header-width: 80%;
 }
 
-$fixed-header-width: 1300px;
-
-@media screen and (max-width: 1199px) {
-  $fixed-header-width: 1180px;
-}
-@media screen and (max-width: 991px) {
-  $fixed-header-width: 1180px;
-}
-@media screen and (max-width: 767px) {
-  $fixed-header-width: 1180px;
-}
-
-@media screen and (max-width: 566px) {
-  $fixed-header-width: 1180px;
-}
-
-$free-space: calc(100vh - $container-width);
-$side-margin: calc( $free-space / 2)
+$free-space: calc(100vw - $container-width);
+$side-margin: calc($free-space / 2)

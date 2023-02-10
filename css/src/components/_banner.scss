@@ -14,7 +14,7 @@
     &-tagline {
       margin: 24% auto 0 auto;
       padding-left: 60px;
-      width: $container-width;
+      @include container-width();
       font-size: 88px;
       font-weight: 800;
       text-transform: uppercase;
