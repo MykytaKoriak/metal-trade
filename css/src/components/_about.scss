@@ -7,9 +7,12 @@
   &-image {
     width: 50%;
     height: 100%;
-    background-position: top center;
-    background-attachment:scroll;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 140%;
+    top: 0;
+    z-index: -1;
+    opacity: .75;
 
     @media screen and (max-width: 992px){
       display: none;
