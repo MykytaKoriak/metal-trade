@@ -10,6 +10,10 @@
     background-position: top center;
     background-attachment:scroll;
     background-size: cover;
+
+    @media screen and (max-width: 992px){
+      display: none;
+    }
   }
 
   &-content {
@@ -19,11 +23,35 @@
     align-items: center;
     background-color: rgb(114, 114, 114);
 
+    @media screen and (min-width: 992px){
+      background-image: none!important;
+    }
+
+    @media screen and (max-width: 992px){
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+
     &-container {
       width: 100%;
       max-width: 460px;
-      @include about-content-margins();
       color: #FFFFFF;
+      @media screen and (min-width: 992px){
+        @include about-content-margins();
+      }
+
+      @media screen and (max-width: 992px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+        max-width: unset;
+        background-color: rgba(0,0,0,0.4);
+      }
+
     }
 
     &-title {

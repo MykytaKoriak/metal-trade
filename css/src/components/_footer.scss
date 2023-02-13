@@ -17,6 +17,10 @@
   &-content {
     width: 50%;
 
+    @media screen and (max-width: 991px) {
+      width: 45%;
+    }
+
     &-tagline {
       color: #606366;
       text-decoration: none;
@@ -67,6 +71,10 @@
 
   &-contacts {
     width: 30%;
+
+    @media screen and (max-width: 991px) {
+      width: 45%;
+    }
 
     &-person {
       display: flex;

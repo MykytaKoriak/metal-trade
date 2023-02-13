@@ -94,7 +94,7 @@
          style="background-image: url('https://static.wixstatic.com/media/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg/v1/fill/w_577,h_612,al_c,q_80,enc_auto/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg')">
 
     </div>
-    <div class="about-content">
+    <div class="about-content" style="background-image: url('https://static.wixstatic.com/media/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg/v1/fill/w_577,h_612,al_c,q_80,enc_auto/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg')"">
         <div class="about-content-container">
             <div class="about-content-title">
                 About Our Company
@@ -259,11 +259,11 @@
             </div>
         </div>
         <div class="contact-content-form">
-
+            <?php echo do_shortcode('[contact-form-7 id="5" title="Контактна форма 1"]') ?>
         </div>
     </div>
     <div class="contact-map">
-
+        <?php echo do_shortcode('[wpgmza id="1"]') ?>
     </div>
 </div>
 

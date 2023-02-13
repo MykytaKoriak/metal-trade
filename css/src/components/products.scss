@@ -17,6 +17,8 @@
 
     @media screen and (max-width: 1199px) {
       width: 45%;
+      margin-right: 10%;
+
 
       &:nth-child(2n+2) {
         margin-right: 0;
@@ -41,11 +43,22 @@
       justify-content: flex-end;
 
       &-title {
-        padding: 50px;
+        margin: 50px;
         color: #FFFFFF;
         font-size: 26px;
         font-weight: 400;
         font-family: "FuturaPT", Arial, sans-serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        line-clamp: 6;
+        box-orient: vertical;
+        max-height: 100%;
+
       }
     }
   }
