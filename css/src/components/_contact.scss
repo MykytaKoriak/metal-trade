@@ -64,6 +64,11 @@
           width: 90%;
           border: 1px solid #909090;
           //border-radius: 10px;
+          &[type=submit] {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+          }
         }
 
         textarea {
