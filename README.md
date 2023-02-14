@@ -1,35 +1,134 @@
-## Webpack 5 Barebones WordPress Theme
+<p align="center">
+  <a href="https://roots.io/sage/">
+    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
+  </a>
+</p>
 
-Provides a sample barebones WordPress theme that features a webpack 5 build for CSS/SASS and JavaScript. The webpack configuration is defined in the [webpack.config.js](./webpack.config.js), and the compiled assets are included in the WordPress theme via code in the [functions.php](./functions.php).
+<p align="center">
+  <a href="LICENSE.md">
+    <img alt="MIT License" src="https://img.shields.io/github/license/roots/sage?color=%23525ddc&style=flat-square" />
+  </a>
 
-## Development
+  <a href="https://packagist.org/packages/roots/sage">
+    <img alt="Packagist" src="https://img.shields.io/packagist/v/roots/sage.svg?style=flat-square" />
+  </a>
 
-After deploying and enabling the theme on a WordPress instance (see *Deploying the Theme* section below), install the theme dependencies by running the following command in the theme root (e.g. `/wp-content/themes/wp-barebones-theme-webpack5-sass`):
+  <a href="https://github.com/roots/sage/actions">
+    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/sage/main.yml?branch=master&style=flat-square" />
+  </a>
 
+  <a href="https://twitter.com/rootswp">
+    <img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2" />
+  </a>
+</p>
+
+<p align="center">
+  <strong>WordPress starter theme with Laravel Blade components and templates, Tailwind CSS, and a modern development workflow</strong>
+</p>
+
+<p align="center">
+  <a href="https://roots.io/"><strong><code>Website</code></strong></a> &nbsp;&nbsp; <a href="https://docs.roots.io/sage/10.x/installation/"><strong><code>Documentation</code></strong></a> &nbsp;&nbsp; <a href="https://github.com/roots/sage/releases"><strong><code>Releases</code></strong></a> &nbsp;&nbsp; <a href="https://discourse.roots.io/"><strong><code>Support</code></strong></a>
+</p>
+
+## Sponsors
+
+**Sage** is an open source project and completely free to use.
+
+However, the amount of effort needed to maintain and develop new features and products within the Roots ecosystem is not sustainable without proper financial backing. If you have the capability, please consider [sponsoring Roots](https://github.com/sponsors/roots).
+
+<p align="center"><a href="https://github.com/sponsors/roots"><img height="32" src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=" alt="Sponsor Roots"></a></p>
+
+<div align="center">
+<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="148" height="111"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="148" height="111"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="148" height="111"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" width="148" height="111"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="148" height="111"></a> <br> <a href="https://generodigital.com/"><img src="https://cdn.roots.io/app/uploads/genero.svg" alt="Genero" width="148" height="111"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="148" height="111"></a> <a href="https://jobpress.io/"><img src="https://cdn.roots.io/app/uploads/jobpress.png" alt="JobPress" width="148" height="111"></a>
+</div>
+
+## Features
+
+- Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn).
+- Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade).
+- Lightning fast frontend development workflow powered by [Bud](https://bud.js.org/).
+- Out of the box support for [Tailwind CSS](https://tailwindcss.com/).
+
+## Requirements
+
+Make sure all dependencies have been installed before moving on:
+
+- [Acorn](https://docs.roots.io/acorn/2.x/installation/) v2
+- [WordPress](https://wordpress.org/) >= 5.9
+- [PHP](https://secure.php.net/manual/en/install.php) >= 8.0 (with [`php-mbstring`](https://secure.php.net/manual/en/book.mbstring.php) enabled)
+- [Composer](https://getcomposer.org/download/)
+- [Node.js](http://nodejs.org/) >= 16
+- [Yarn](https://yarnpkg.com/en/docs/install)
+
+## Theme installation
+
+Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
+
+```sh
+# @ app/themes/ or wp-content/themes/
+$ composer create-project roots/sage your-theme-name
 ```
-npm install
+
+To install the latest development version of Sage, add `dev-main` to the end of the command:
+
+```sh
+$ composer create-project roots/sage your-theme-name dev-main
 ```
 
-## Build
+Make sure that you have [Acorn installed](https://docs.roots.io/acorn/2.x/installation/).
 
-Various build commands are available that execute the webpack 5 builds:
+## Theme structure
 
-- `npm run build` - development webpack build (`webpack --mode development`).
-- `npm run dist` - production webpack build, with code minification enabled (`webpack --mode production`).
-- `npm run watch` - development watch command.
-
-## Deploying the Theme
-
-This theme can be downloaded and deployed into a WordPress instance's themes directory (i.e. `/wp-content/themes`). Once the theme is deployed, run the build commands (`npm install` and `npm run dist`) to install and build the JavaScript and CSS.
-
-### Symlinking to Theme
-
-It may be helpful during development to create a symlink in the WordPress theme's directory that points to a local copy of this repository. An symlink may look like:
-
+```sh
+themes/your-theme-name/   # → Root of your Sage based theme
+├── app/                  # → Theme PHP
+│   ├── Providers/        # → Service providers
+│   ├── View/             # → View models
+│   ├── filters.php       # → Theme filters
+│   └── setup.php         # → Theme setup
+├── composer.json         # → Autoloading for `app/` files
+├── public/               # → Built theme assets (never edit)
+├── functions.php         # → Theme bootloader
+├── index.php             # → Theme template wrapper
+├── node_modules/         # → Node.js packages (never edit)
+├── package.json          # → Node.js dependencies and scripts
+├── resources/            # → Theme assets and templates
+│   ├── fonts/            # → Theme fonts
+│   ├── images/           # → Theme images
+│   ├── scripts/          # → Theme javascript
+│   ├── styles/           # → Theme stylesheets
+│   └── views/            # → Theme templates
+│       ├── components/   # → Component templates
+│       ├── forms/        # → Form templates
+│       ├── layouts/      # → Base templates
+│       ├── partials/     # → Partial templates
+        └── sections/     # → Section templates
+├── screenshot.png        # → Theme screenshot for WP admin
+├── style.css             # → Theme meta information
+├── vendor/               # → Composer packages (never edit)
+└── bud.config.js         # → Bud configuration
 ```
-ln -s /code-directory/wp-barebone-theme-webpack5-sass /var/www/html/wp-content/themes/wp-barebone-theme-webpack5-sass
-```
 
-## Blog Post
+## Theme setup
 
-Check out a blog post I created that describes configuring webpack to work with WordPress in more detail: [https://taylor.callsen.me/using-webpack-5-and-sass-with-wordpress/](https://taylor.callsen.me/using-webpack-5-and-sass-with-wordpress/)
+Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
+
+## Theme development
+
+- Run `yarn` from the theme directory to install dependencies
+- Update `bud.config.js` with your local dev URL
+
+### Build commands
+
+- `yarn dev` — Compile assets when file changes are made, start Browsersync session
+- `yarn build` — Compile assets for production
+
+## Community
+
+Keep track of development and community news.
+
+- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
+- Participate on the [Roots Discourse](https://discourse.roots.io/)
+- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
+- Read and subscribe to the [Roots Blog](https://roots.io/blog/)
+- Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)

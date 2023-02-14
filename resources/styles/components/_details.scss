@@ -1,0 +1,126 @@
+.details {
+  &-list {
+    @include container-width();
+    margin: 50px auto 50px auto;
+
+    &-block {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 60px;
+
+      @media screen and (max-width: 566px) {
+        flex-direction: column;
+      }
+
+      &-revert {
+        .details-list-block-title {
+          order: 2;
+          text-align: right;
+          @media screen and (max-width: 566px) {
+            order: 1;
+            text-align: left;
+          }
+
+          &-background {
+            left: unset;
+            right: 0;
+
+            @media screen and (max-width: 566px) {
+              left: 0;
+              right: unset;
+            }
+
+          }
+        }
+
+        .details-list-block-content {
+          order: 1;
+          @media screen and (max-width: 566px) {
+            order: 2;
+            text-align: left;
+          }
+
+        }
+      }
+
+      &-title {
+        position: relative;
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 566px) {
+          width: 100%;
+          min-height: 200px;
+        }
+
+        &-background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #000000;
+          font-size: 320px;
+          font-family: 'Arial', Arial, sans-serif;
+          line-height: 0.7;
+          font-weight: 600;
+          opacity: 0.1;
+          background-position: center center;
+          border-color: transparent;
+          border-style: solid;
+
+          @media screen and (max-width: 566px) {
+            font-size: 220px;
+          }
+        }
+
+        &-text {
+          color: #222222;
+          font-size: 60px;
+          font-family: 'Arial', Arial, sans-serif;
+          line-height: 1;
+          font-weight: 500;
+          text-transform: uppercase;
+          background-position: center center;
+          border-color: transparent;
+          border-style: solid;
+
+          @media screen and (max-width: 566px) {
+            font-size: 40px;
+          }
+
+        }
+      }
+
+      &-content {
+        width: 50%;
+
+        @media screen and (max-width: 566px) {
+          width: 100%;
+        }
+
+        &-image {
+          width: 100%;
+          height: 300px;
+          background-position: center;
+          background-size: cover;
+          margin-bottom: 30px;
+          
+          @media screen and (max-width: 566px) {
+            height: 200px;
+          }
+        }
+
+        &-text {
+          color: #222222;
+          font-size: 16px;
+          font-family: 'Arial', Arial, sans-serif;
+          line-height: 1.7;
+          font-weight: 400;
+          background-position: center center;
+          border-color: transparent;
+          border-style: solid;
+        }
+      }
+    }
+  }
+}

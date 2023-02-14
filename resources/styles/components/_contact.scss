@@ -1,0 +1,124 @@
+.contact {
+  width: 100vw;
+  background-color: #F7F7F7;
+
+  &-content {
+    @include container-width();
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 566px) {
+      flex-direction: column;
+    }
+
+    &-info {
+      width: 50%;
+
+      @media screen and (max-width: 566px) {
+        width: 100%;
+      }
+
+      &-title {
+        line-height: 1.35em;
+        font-size: 40px;
+        color: rgb(55, 50, 46);
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      &-mobile-map {
+        display: none;
+
+        @media screen and (max-width: 566px) {
+          display: block;
+          height: 235px;
+        }
+
+        > div {
+          height: 100%!important;
+        }
+      }
+
+      &-address {
+        margin-bottom: 20px;
+      }
+
+      &-email {
+        margin-bottom: 20px;
+      }
+
+      &-phone {
+        margin-bottom: 20px;
+      }
+
+      &-social {
+        margin-bottom: 20px;
+
+        &-icon {
+          display: inline-block;
+          width: 26px;
+          height: 26px;
+          background-color: #080808;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &-form {
+      width: 50%;
+
+      @media screen and (max-width: 566px) {
+        width: 100%;
+      }
+
+      &-title {
+        display: none;
+        line-height: 1.35em;
+        font-size: 30px;
+        color: rgb(55, 50, 46);
+        font-weight: 700;
+        margin-bottom: 20px;
+        @media screen and (max-width: 566px) {
+          display: block;
+        }
+      }
+
+      form {
+        width: 90%;
+        max-width: 360px;
+
+        label {
+          font-family: "FuturaPT", Arial, sans-serif;
+        }
+
+        input {
+          padding: 8px 10px;
+          width: 90%;
+          border: 1px solid #909090;
+          //border-radius: 10px;
+          &[type=submit] {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+          }
+        }
+
+        textarea {
+          padding: 8px 10px;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  &-map {
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.4);
+    @media screen and (max-width: 566px) {
+      display: none;
+    }
+  }
+}
