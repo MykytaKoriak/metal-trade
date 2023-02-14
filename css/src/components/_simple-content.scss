@@ -1,0 +1,16 @@
+.simple-content {
+  margin: 40px auto 40px auto;
+  @include container-width();
+  font-family: "FuturaPT", Arial, sans-serif;
+  max-width: 860px;
+
+  &-title {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  &-text {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+}

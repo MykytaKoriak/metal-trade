@@ -94,30 +94,32 @@
          style="background-image: url('https://static.wixstatic.com/media/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg/v1/fill/w_577,h_612,al_c,q_80,enc_auto/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg')">
 
     </div>
-    <div class="about-content" style="background-image: url('https://static.wixstatic.com/media/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg/v1/fill/w_577,h_612,al_c,q_80,enc_auto/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg')"">
-        <div class="about-content-container">
-            <div class="about-content-title">
-                About Our Company
-            </div>
-            <div class="about-content-description">
-                MK Trading LLC는 2015년 Phoenix, AZ에서 설립이 되었으며, 2019년도에 LA로 Main Office를 옮겼습니다. Metal Scrap 수출, 수입을 전문적으로
-                취급하며, 한국 & 동남아 & 중동 기업들과 거래를 주로 하고 있습니다.
-                <br>
-                <br>
-                신뢰와 정직을 기반으로 철강, 비철 그리고 물류에 종사하는 파트너들과의 지속적인 긴밀한 관계로 세계적인 Metal Scrap 회사로 성장 중입니다.
-                <br>
-                <br>
-                MK Trading LLC was established in Phoenix, AZ in 2015 and moved to LA in 2019. We are specialized in
-                metal scrap exporting and importing, and mainly deals with companies in Korea. We are also trading with
-                Southeast Asian and Middle Eastern countries.
-                <br>
-                <br>
-                Based on trust and honesty, it is growing into a world-class metal scrap company due to its continuous
-                close relationship with its partners in steel, non-ferrous and logistic
-            </div>
-
+    <div class="about-content"
+         style="background-image: url('https://static.wixstatic.com/media/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg/v1/fill/w_577,h_612,al_c,q_80,enc_auto/7c3533_617ac78ff5d844e0b6f5d0b0da9fbb4b~mv2.jpg')"
+    ">
+    <div class="about-content-container">
+        <div class="about-content-title">
+            About Our Company
         </div>
+        <div class="about-content-description">
+            MK Trading LLC는 2015년 Phoenix, AZ에서 설립이 되었으며, 2019년도에 LA로 Main Office를 옮겼습니다. Metal Scrap 수출, 수입을 전문적으로
+            취급하며, 한국 & 동남아 & 중동 기업들과 거래를 주로 하고 있습니다.
+            <br>
+            <br>
+            신뢰와 정직을 기반으로 철강, 비철 그리고 물류에 종사하는 파트너들과의 지속적인 긴밀한 관계로 세계적인 Metal Scrap 회사로 성장 중입니다.
+            <br>
+            <br>
+            MK Trading LLC was established in Phoenix, AZ in 2015 and moved to LA in 2019. We are specialized in
+            metal scrap exporting and importing, and mainly deals with companies in Korea. We are also trading with
+            Southeast Asian and Middle Eastern countries.
+            <br>
+            <br>
+            Based on trust and honesty, it is growing into a world-class metal scrap company due to its continuous
+            close relationship with its partners in steel, non-ferrous and logistic
+        </div>
+
     </div>
+</div>
 </div>
 
 <div class="services">
@@ -264,6 +266,64 @@
     </div>
     <div class="contact-map">
         <?php echo do_shortcode('[wpgmza id="1"]') ?>
+    </div>
+</div>
+
+<div class="simple-content">
+    <div class="simple-content-title">
+        Створення магазину починається з
+    </div>
+    <div class="simple-content-text">
+        покупців, продавців, служби експлуатації та власників.
+        Інтереси і комфорт кожного є запорукою успіху роботи сучасного магазину.
+        Ми пропонуємо:
+    </div>
+</div>
+
+<div class="details">
+    <div class="details-list">
+        <div class="details-list-block">
+            <div class="details-list-block-title">
+                <div class="details-list-block-title-background">
+                    01
+                </div>
+                <div class="details-list-block-title-text">
+                    Аудит торгових об'єктів
+                </div>
+            </div>
+            <div class="details-list-block-content">
+                <div class="details-list-block-content-image"
+                     style='background-image: url("https://thumb.tildacdn.com/tild3965-3663-4066-a464-316333643435/-/cover/560x300/center/center/-/format/webp/pexels-monstera-5273.jpg")'>
+
+                </div>
+                <div class="details-list-block-content-text">
+                    Для того, щоб покращити щось, треба розуміти – що є зараз. Для цього ми робимо комплексний аудит
+                    існуючих магазинів з точки зору маркетингу, асортименту, інтер’єру, обладнання, інших факторів, які
+                    можуть впливати на успішність. Звідси і виходить новий, або оновлений концепт нової точки.
+                </div>
+            </div>
+        </div>
+        <div class="details-list-block details-list-block-revert">
+            <div class="details-list-block-title">
+                <div class="details-list-block-title-background">
+                    01
+                </div>
+                <div class="details-list-block-title-text">
+                    Аудит торгових об'єктів
+                </div>
+            </div>
+            <div class="details-list-block-content">
+                <div class="details-list-block-content-image"
+                     style='background-image: url("https://thumb.tildacdn.com/tild3965-3663-4066-a464-316333643435/-/cover/560x300/center/center/-/format/webp/pexels-monstera-5273.jpg")'>
+
+                </div>
+                <div class="details-list-block-content-text">
+                    Для того, щоб покращити щось, треба розуміти – що є зараз. Для цього ми робимо комплексний аудит
+                    існуючих магазинів з точки зору маркетингу, асортименту, інтер’єру, обладнання, інших факторів, які
+                    можуть впливати на успішність. Звідси і виходить новий, або оновлений концепт нової точки.
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
