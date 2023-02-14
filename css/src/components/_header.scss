@@ -13,6 +13,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 566px) {
+      width: 95vw;
+    }
   }
 
   &-logo {
@@ -20,6 +24,10 @@
     width: 201px;
     height: 42px;
     margin-left: 28px;
+
+    @media screen and (max-width: 566px) {
+      margin-left: 0;
+    }
   }
 
   &-burger {

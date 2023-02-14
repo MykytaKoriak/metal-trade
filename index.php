@@ -239,6 +239,9 @@
             <div class="contact-content-info-title">
                 Contact Us
             </div>
+            <div class="contact-content-info-mobile-map">
+                <?php echo do_shortcode('[wpgmza id="1"]') ?>
+            </div>
             <div class="contact-content-info-address">
                 1848 E 55th Street, Los Angeles, CA, 90058
             </div>
@@ -261,6 +264,9 @@
             </div>
         </div>
         <div class="contact-content-form">
+            <div class="contact-content-form-title">
+                Напишіть нам
+            </div>
             <?php echo do_shortcode('[contact-form-7 id="5" title="Контактна форма 1"]') ?>
         </div>
     </div>

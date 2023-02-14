@@ -1,5 +1,6 @@
 .contact-page {
   font-family: 'Arial', Arial, sans-serif;
+  margin-bottom: 20px;
 
   &-container {
     @include container-width();
@@ -11,6 +12,10 @@
       flex-direction: column;
       flex-wrap: unset;
     }
+
+    @media screen and (max-width: 566px) {
+      margin-bottom: 0;
+    }
   }
 
   &-map {
@@ -18,8 +23,10 @@
     max-width: 656px;
     min-height: 400px;
     background-color: #767676;
+
     @media screen and (max-width: 991px) {
       width: 100%;
+      min-height: 300px;
     }
 
   }
@@ -27,6 +34,10 @@
   &-info {
     padding-top: 40px;
     padding-left: 80px;
+
+    @media screen and (max-width: 566px) {
+      padding-left: 0;
+    }
 
     &-title {
       margin-bottom: 40px;
@@ -68,6 +79,14 @@
     display: flex;
     flex-direction: row;
 
+    @media screen and (max-width: 566px) {
+      width: 100%;
+      margin-left: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+
     &-social {
       width: 50%;
 
@@ -81,6 +100,10 @@
       }
 
       &-links {
+        @media screen and (max-width: 566px) {
+          margin-bottom: 20px;
+        }
+
         &-el {
           width: 20px;
           height: 20px;
@@ -105,6 +128,11 @@
       transition: .3s;
       text-transform: uppercase;
       cursor: pointer;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 566px) {
+        width: 100%;
+      }
     }
 
     &-popup {
@@ -133,6 +161,10 @@
         align-items: center;
         justify-content: center;
         position: relative;
+
+        @media screen and (max-width: 566px) {
+          padding: 30px;
+        }
       }
 
       &-title {
@@ -141,6 +173,12 @@
         font-weight: 400;
         font-size: 44px;
         line-height: 40px;
+
+        @media screen and (max-width: 566px) {
+          font-size: 30px;
+          align-self: flex-start;
+        }
+
       }
 
       &-form {
@@ -235,6 +273,10 @@
         }
         @media screen and (max-width: 991px) {
           right: 100px;
+        }
+        @media screen and (max-width: 566px) {
+          top: 35px;
+          right: 30px;
         }
 
       }

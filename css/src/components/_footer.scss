@@ -12,6 +12,13 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+
+    @media screen and (max-width: 566px) {
+      padding-top: 40px;
+      padding-bottom: 20px;
+      flex-direction: column;
+      flex-wrap: unset;
+    }
   }
 
   &-content {
@@ -19,6 +26,10 @@
 
     @media screen and (max-width: 991px) {
       width: 45%;
+    }
+
+    @media screen and (max-width: 566px) {
+      width: 100%;
     }
 
     &-tagline {
@@ -32,9 +43,18 @@
       border-color: transparent;
       border-style: solid;
       margin-bottom: 60px;
+
+      @media screen and (max-width: 566px) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
     }
 
     &-map {
+      @media screen and (max-width: 566px) {
+        width: 100%;
+      }
+
       &-title {
         color: #606366;
         text-decoration: none;
@@ -57,11 +77,21 @@
         @media screen and (max-width: 991px) {
           flex-direction: column;
         }
+        @media screen and (max-width: 566px) {
+          width: 100%;
+          margin-bottom: 40px;
+        }
 
         &-item {
           width: 50%;
           margin-bottom: 20px;
           font-size: 26px;
+
+          @media screen and (max-width: 566px) {
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 10px;
+          }
 
           &-link {
             color: #FFFFFF;
@@ -78,6 +108,9 @@
     @media screen and (max-width: 991px) {
       width: 45%;
     }
+    @media screen and (max-width: 566px) {
+      width: 100%;
+    }
 
     &-person {
       display: flex;
@@ -88,6 +121,12 @@
         text-decoration: none;
         margin-bottom: 20px;
         font-size: 24px;
+
+        @media screen and (max-width: 566px) {
+          width: 100%;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
       }
 
       &-email {
@@ -95,6 +134,12 @@
         text-decoration: none;
         margin-bottom: 50px;
         font-size: 24px;
+
+        @media screen and (max-width: 566px) {
+          width: 100%;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
       }
     }
 
@@ -110,12 +155,16 @@
         border-color: transparent;
         border-style: solid;
         margin-bottom: 30px;
+        @media screen and (max-width: 566px) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
       }
 
       &-list {
         display: flex;
         flex-direction: column;
-
 
         &-item {
           color: #FFFFFF;

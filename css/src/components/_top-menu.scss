@@ -22,6 +22,10 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    @media screen and (max-width: 566px) {
+      width: 90vw;
+      padding: 20px;
+    }
   }
 
   &-links {
@@ -33,6 +37,10 @@
       font-family: 'FuturaPT', 'Arial', sans-serif;
       text-decoration: none;
       line-height: 1.4em;
+
+      @media screen and (max-width: 566px) {
+        font-size: 25px;
+      }
 
       &-logo {
         width: 200px;
@@ -65,6 +73,10 @@
       display: flex;
       flex-direction: row;
 
+      @media screen and (max-width: 566px) {
+        flex-direction: column;
+      }
+
       &-item {
         padding: 10px 20px;
         background-color: #FFFFFF;
@@ -75,6 +87,14 @@
         font-weight: 700;
         font-family: 'FuturaPT', 'Arial', sans-serif;
         text-decoration: none;
+
+        @media screen and (max-width: 566px) {
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
@@ -95,5 +115,10 @@
     @media screen and (max-width: 991px) {
       right: 100px;
     }
+    @media screen and (max-width: 566px) {
+      top: 25px;
+      right: 25px;
+    }
+
   }
 }

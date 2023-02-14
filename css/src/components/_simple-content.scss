@@ -7,10 +7,18 @@
   &-title {
     font-size: 50px;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 566px) {
+      font-size: 30px;
+    }
   }
 
   &-text {
     font-size: 38px;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 566px) {
+      font-size: 20px;
+    }
   }
 }
