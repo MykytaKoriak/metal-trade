@@ -6,12 +6,22 @@
     margin: 0 auto 100px auto;
     display: flex;
     flex-wrap: nowrap;
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      flex-wrap: unset;
+    }
   }
 
   &-map {
     width: 50%;
     max-width: 656px;
+    min-height: 400px;
     background-color: #767676;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+
   }
 
   &-info {
