@@ -327,6 +327,100 @@
     </div>
 </div>
 
+<div class="contact-page">
+    <div class="contact-page-container">
+        <div class="contact-page-map">
+
+        </div>
+        <div class="contact-page-info">
+            <div class="contact-page-info-title">
+                Write us, call us or drop by our office:
+            </div>
+            <div class="contact-page-info-blocks">
+                <div class="contact-page-info-blocks-el">
+                    <div class="contact-page-info-blocks-el-title">
+                        BUILDING HOURS
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        Monday - Friday
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        9:00 - 5:00
+                    </div>
+                </div>
+                <div class="contact-page-info-blocks-el">
+                    <div class="contact-page-info-blocks-el-title">
+                        CALL OR FAX
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        212 759 5408
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        212 751 2771 (FAX)
+                    </div>
+                </div>
+                <div class="contact-page-info-blocks-el">
+                    <div class="contact-page-info-blocks-el-title">
+                        BUILDING HOURS
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        Monday - Friday
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        9:00 - 5:00
+                    </div>
+                </div>
+                <div class="contact-page-info-blocks-el">
+                    <div class="contact-page-info-blocks-el-title">
+                        CALL OR FAX
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        212 759 5408
+                    </div>
+                    <div class="contact-page-info-blocks-el-text">
+                        212 751 2771 (FAX)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-page-container">
+        <div class="contact-page-mail">
+            <div class="contact-page-mail-social">
+                <div class="contact-page-mail-social-title">
+                    Join Us
+                </div>
+                <div class="contact-page-mail-social-links">
+                    <a href="#" class="contact-page-mail-social-links-el">
+                        <img src="" alt="">
+                    </a>
+                    <a href="#" class="contact-page-mail-social-links-el">
+                        <img src="" alt="">
+                    </a>
+                    <a href="#" class="contact-page-mail-social-links-el">
+                        <img src="" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="contact-page-mail-button">
+                Contact Us
+            </div>
+            <div class="contact-page-mail-popup">
+                <div class="contact-page-mail-popup-container">
+                    <div class="contact-page-mail-popup-close">
+                    </div>
+                    <div class="contact-page-mail-popup-title">
+                        Contact Us
+                    </div>
+                    <div class="contact-page-mail-popup-form">
+                        <?php echo do_shortcode('[contact-form-7 id="5" title="Контактна форма 1"]') ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer id="footer" class="footer">
     <div class="footer-container">
         <div class="footer-content">
