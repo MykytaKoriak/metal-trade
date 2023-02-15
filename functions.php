@@ -11,7 +11,7 @@
 |
 */
 
-if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
+if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
     wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'sage'));
 }
 
@@ -29,7 +29,7 @@ require $composer;
 |
 */
 
-if (! function_exists('\Roots\bootloader')) {
+if (!function_exists('\Roots\bootloader')) {
     wp_die(
         __('You need to install Acorn to use this theme.', 'sage'),
         '',
@@ -56,10 +56,35 @@ if (! function_exists('\Roots\bootloader')) {
 
 collect(['setup', 'filters'])
     ->each(function ($file) {
-        if (! locate_template($file = "app/{$file}.php", true, true)) {
+        if (!locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
-                /* translators: %s is replaced with the relative file path */
+            /* translators: %s is replaced with the relative file path */
                 sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file)
             );
         }
     });
+
+function metal_trade_widget_collection($folders)
+{
+    $folders[] = dirname(__FILE__) . '/app/Widgets/'; // important: Slash on end string is required.
+    return $folders;
+}
+
+add_filter('siteorigin_widgets_widget_folders', 'metal_trade_widget_collection');
+
+
+function asset_name($type, $start, $ext)
+{
+    $dir = dirname(__FILE__) . '/public/' . $type;
+    $files = glob($dir . '/*.' . $ext);
+    $suffixLength = -7 - strlen($ext) - 1;
+    foreach ($files as $file) {
+        $name = substr($file, strlen($dir) + 1, $suffixLength);
+        if ($name === $start) {
+            return $file;
+        }
+    }
+    throw new Exception('file not found');
+}
+
+

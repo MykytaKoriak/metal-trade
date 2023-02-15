@@ -134,3 +134,12 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+function register_widgets() {
+    foreach (glob(dirname(__FILE__)."/Widgets/*.php") as $filename)
+    {
+        include $filename;
+    }
+}
+
+register_widgets();
