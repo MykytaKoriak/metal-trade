@@ -1,8 +1,8 @@
 <?php
 
 /*
-Widget Name: Banner Widget
-Description: Banner Widget
+Widget Name: Tagline Widget
+Description: Tagline Widget
 Author: Mykyta Koriak
 Author URI: https://github.com/MykytaKoriak
 Widget URI: https://github.com/MykytaKoriak/metal-trade
@@ -10,7 +10,7 @@ Widget URI: https://github.com/MykytaKoriak/metal-trade
 
 use function Roots\bundle;
 
-class BannerWidget extends SiteOrigin_Widget
+class TaglineWidget extends SiteOrigin_Widget
 {
 
     function __construct()
@@ -20,15 +20,15 @@ class BannerWidget extends SiteOrigin_Widget
         // Call the parent constructor with the required arguments.
         parent::__construct(
         // The unique id for your widget.
-            'mk-banner-widget',
+            'mk-tagline-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет головного банеру', 'hello-world-widget-text-domain'),
+            __('Віджет слоган', 'hello-world-widget-text-domain'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет головного банеру', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет слоган', 'hello-world-widget-text-domain'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -37,18 +37,19 @@ class BannerWidget extends SiteOrigin_Widget
 
             // The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
-                'text' => array(
-                    'type' => 'text',
-                    'label' => __('Заголовок для баннера.', 'hello-world-widget-text-domain'),
-                    'default' => 'Hello world!',
-                ),
-                'background' => array(
-                    'type' => 'media',
-                    'label' => __('Виберіть зображення фону', 'widget-form-fields-text-domain'),
-                    'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                    'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
-                    'library' => 'image',
-                    'fallback' => false
+                'tagline' => array(
+                    'type' => 'tinymce',
+                    'label' => __( 'Введіть слоган', 'widget-form-fields-text-domain' ),
+                    'default' => 'Ми - це ті, про кого ви думаєте, коли хочете, щоб це було зроблено правильно!',
+                    'rows' => 10,
+                    'default_editor' => 'html',
+                    'button_filters' => array(
+                        'mce_buttons' => array( $this, 'filter_mce_buttons' ),
+                        'mce_buttons_2' => array( $this, 'filter_mce_buttons_2' ),
+                        'mce_buttons_3' => array( $this, 'filter_mce_buttons_3' ),
+                        'mce_buttons_4' => array( $this, 'filter_mce_buttons_5' ),
+                        'quicktags_settings' => array( $this, 'filter_quicktags_settings' ),
+                    ),
                 )
             ),
 
@@ -63,11 +64,10 @@ class BannerWidget extends SiteOrigin_Widget
             bundle('app')->enqueue();
         }
         $data = [
-            'tagline' => $instance['text'],
-            'background' => wp_get_attachment_url($instance['background']),
+            'tagline' => $instance['tagline'],
         ];
-        echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/mk-banner.blade.php", $data);
+        echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/tagline.blade.php", $data);
     }
 }
 
-siteorigin_widget_register('mk-banner-widget', __FILE__, 'BannerWidget');
+siteorigin_widget_register('mk-tagline-widget', __FILE__, 'TaglineWidget');

@@ -18,23 +18,23 @@
 
 @mixin about-content-margins {
   @media screen and (min-width: 1199px) {
-    margin-right: calc(calc(100vw - 1200px) / 2);
-    margin-left: calc(calc(calc(50vw - calc(calc(100vw - 1200px) / 2)) - 460px) / 2);
+    margin-right: 0;
+    margin-left: 70px;
   }
   @media screen and (max-width: 1199px) {
-    margin-right: calc(calc(100vw - 960px) / 2);
-    margin-left: calc(calc(calc(50vw - calc(calc(100vw - 960px) / 2)) - 460px) / 2);
+    margin-right: 16px;
+    margin-left: 10px;
   }
   @media screen and (max-width: 991px) {
-    margin-right: calc(calc(100vw - 720px) / 2);
-    margin-left: calc(calc(calc(50vw - calc(calc(100vw - 720px) / 2)) - 460px) / 2);
+    margin-right: calc( calc( 100vw - 720px ) / 2);
+    margin-left: calc(calc(calc(50vw - calc( calc( 100vw - 720px ) / 2) ) - 460px ) / 2);
   }
   @media screen and (max-width: 767px) {
-    margin-right: calc(calc(100vw - 540px) / 2);
-    margin-left: calc(calc(calc(50vw - calc(calc(100vw - 540px) / 2)) - 460px) / 2);
+    margin-right: calc( calc( 100vw - 540px ) / 2);
+    margin-left: calc( calc( calc( 50vw - calc( calc( 100vw - 540px ) / 2) ) - 460px ) / 2);
   }
   @media screen and (max-width: 566px) {
-    margin-right: calc(calc(100vw - 80vw) / 2);
-    margin-left: calc(calc(calc(50vw - calc(calc(100vw - 80vw) / 2)) - 460px) / 2);
+    margin-right: calc( calc( 100vw - 80vw ) / 2);
+    margin-left: calc( calc( calc( 50vw - calc( calc( 100vw - 80vw ) / 2) ) - 460px ) / 2);
   }
 }

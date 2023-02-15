@@ -10,7 +10,7 @@ Widget URI: https://github.com/MykytaKoriak/metal-trade
 
 use function Roots\bundle;
 
-class BannerWidget extends SiteOrigin_Widget
+class SimpleContentWidget extends SiteOrigin_Widget
 {
 
     function __construct()
@@ -20,7 +20,7 @@ class BannerWidget extends SiteOrigin_Widget
         // Call the parent constructor with the required arguments.
         parent::__construct(
         // The unique id for your widget.
-            'mk-banner-widget',
+            'mk-simple-content-widget',
 
             // The name of the widget for display purposes.
             __('Віджет головного банеру', 'hello-world-widget-text-domain'),
@@ -70,4 +70,4 @@ class BannerWidget extends SiteOrigin_Widget
     }
 }
 
-siteorigin_widget_register('mk-banner-widget', __FILE__, 'BannerWidget');
+siteorigin_widget_register('mk-simple-content-widget', __FILE__, 'SimpleContentWidget');

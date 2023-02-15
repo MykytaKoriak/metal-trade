@@ -1,12 +1,11 @@
 .about {
-  min-height: 90vh;
+  min-height: 500px;
   width: 100%;
   display: flex;
   flex-direction: row;
 
   &-image {
     width: 50%;
-    height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 140%;
@@ -14,23 +13,22 @@
     z-index: -1;
     opacity: .75;
 
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       display: none;
     }
   }
 
   &-content {
     width: 50%;
-    height: 100%;
     display: flex;
     align-items: center;
     background-color: rgb(114, 114, 114);
 
-    @media screen and (min-width: 992px){
-      background-image: none!important;
+    @media screen and (min-width: 992px) {
+      background-image: none !important;
     }
 
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       width: 100%;
       background-position: center;
       background-size: cover;
@@ -40,23 +38,42 @@
       width: 100%;
       max-width: 460px;
       color: #FFFFFF;
-      @media screen and (min-width: 992px){
-        @include about-content-margins();
+      @media screen and (min-width: 992px) {
+        @media screen and (min-width: 1199px) {
+          margin-right: 0;
+          margin-left: 70px;
+        }
+        @media screen and (max-width: 1199px) {
+          margin-right: 16px;
+          margin-left: 10px;
+        }
+        @media screen and (max-width: 991px) {
+          margin-right: calc(calc(100vw - 720px) / 2);
+          margin-left: calc(calc(calc(50vw - calc(calc(100vw - 720px) / 2)) - 460px) / 2);
+        }
+        @media screen and (max-width: 767px) {
+          margin-right: calc(calc(100vw - 540px) / 2);
+          margin-left: calc(calc(calc(50vw - calc(calc(100vw - 540px) / 2)) - 460px) / 2);
+        }
+        @media screen and (max-width: 566px) {
+          margin-right: calc(calc(100vw - 80vw) / 2);
+          margin-left: calc(calc(calc(50vw - calc(calc(100vw - 80vw) / 2)) - 460px) / 2);
+        }
       }
 
-      @media screen and (max-width: 992px){
+      @media screen and (max-width: 992px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 100%;
         padding: 50px;
         max-width: unset;
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0, 0, 0, 0.4);
       }
 
       @media screen and (max-width: 566px) {
         padding: 20px;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
 
       }
 

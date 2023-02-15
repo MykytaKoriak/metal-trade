@@ -1,6 +1,21 @@
 .details {
   &-list {
-    @include container-width();
+    @media screen and (min-width: 1199px) {
+      width: 1200px;
+    }
+    @media screen and (max-width: 1199px) {
+      width: 960px;
+    }
+    @media screen and (max-width: 991px) {
+      width: 720px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 540px;
+    }
+    @media screen and (max-width: 566px) {
+      width: 80vw;
+    }
+
     margin: 50px auto 50px auto;
 
     &-block {
@@ -16,6 +31,8 @@
         .details-list-block-title {
           order: 2;
           text-align: right;
+          justify-content: flex-end;
+
           @media screen and (max-width: 566px) {
             order: 1;
             text-align: left;
@@ -104,7 +121,7 @@
           background-position: center;
           background-size: cover;
           margin-bottom: 30px;
-          
+
           @media screen and (max-width: 566px) {
             height: 200px;
           }

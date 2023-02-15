@@ -3,12 +3,26 @@
   background-color: #F7F7F7;
 
   &-content {
-    @include container-width();
     margin: 0 auto;
     padding: 40px 0;
     display: flex;
     flex-direction: row;
 
+    @media screen and (min-width: 1199px) {
+      width: 1200px;
+    }
+    @media screen and (max-width: 1199px) {
+      width: 960px;
+    }
+    @media screen and (max-width: 991px) {
+      width: 720px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 540px;
+    }
+    @media screen and (max-width: 566px) {
+      width: 80vw;
+    }
     @media screen and (max-width: 566px) {
       flex-direction: column;
     }
@@ -37,7 +51,7 @@
         }
 
         > div {
-          height: 100%!important;
+          height: 100% !important;
         }
       }
 
@@ -46,10 +60,12 @@
       }
 
       &-email {
+        display: block;
         margin-bottom: 20px;
       }
 
       &-phone {
+        display: block;
         margin-bottom: 20px;
       }
 
@@ -60,7 +76,6 @@
           display: inline-block;
           width: 26px;
           height: 26px;
-          background-color: #080808;
           margin-right: 20px;
         }
       }
@@ -97,6 +112,7 @@
           padding: 8px 10px;
           width: 90%;
           border: 1px solid #909090;
+          margin-bottom: 10px;
           //border-radius: 10px;
           &[type=submit] {
             width: 100px;
@@ -106,8 +122,10 @@
         }
 
         textarea {
+          border: 1px solid #909090;
           padding: 8px 10px;
           width: 90%;
+          height: 150px;
         }
       }
     }
