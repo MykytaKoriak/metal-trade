@@ -98,12 +98,6 @@ class ProductsWidget extends SiteOrigin_Widget
                 ];
             }
         }
-        foreach ($instance['a_repeater'] as $item) {
-            $data['products'][] = [
-                'title' => $item['title'],
-                'background' => wp_get_attachment_url($item['background']),
-            ];
-        }
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/products.blade.php", $data);
     }
 }

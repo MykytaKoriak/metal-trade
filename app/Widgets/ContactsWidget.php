@@ -150,6 +150,7 @@ class ContactsWidget extends SiteOrigin_Widget
             'address_list' => $instance['address_list'],
             'email_list' => $instance['email_list'],
             'phone_list' => $instance['phone_list'],
+            'mobile_form_title' => $instance['mobile_form_title'],
             'social_list' => [],
             'map' => $instance['map'],
         ];

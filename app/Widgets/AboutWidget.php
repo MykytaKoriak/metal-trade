@@ -79,8 +79,16 @@ class AboutWidget extends SiteOrigin_Widget
         $data = [
             'title' => $instance['text'],
             'content' => $instance['content'],
-            'background' => wp_get_attachment_url($instance['background']),
+            'background' => wp_get_attachment_image_url($instance['background'], "large"),
+            'background_height' => 0
         ];
+
+        $background_data = wp_get_attachment_image_src($instance['background'], "large");
+        if (isset($background_data[2])) {
+            $data['background_height'] = $background_data[2];
+        } else {
+            $data['background_height'] = 500;
+        }
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/about.blade.php", $data);
     }
 }

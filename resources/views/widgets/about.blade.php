@@ -1,6 +1,6 @@
 <div class="about">
   <div class="about-image"
-       style="background-image: url('{!! $background !!}')">
+       style="background-image: url('{!! $background !!}')" data-height="{!! $background_height !!}">
 
   </div>
   <div class="about-content"

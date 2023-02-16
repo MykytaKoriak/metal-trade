@@ -7,7 +7,7 @@
   background-color: #080808;
   color: #FFFFFF;
   transition: 1s;
-  z-index: 10;
+  z-index: 20;
 
   &-open {
     left: 0;
@@ -15,21 +15,21 @@
 
   &-container {
     height: 90vh;
-      @media screen and (min-width: 1199px) {
-    width: 1200px;
-  }
-  @media screen and (max-width: 1199px) {
-    width: 960px;
-  }
-  @media screen and (max-width: 991px) {
-    width: 720px;
-  }
-  @media screen and (max-width: 767px) {
-    width: 540px;
-  }
-  @media screen and (max-width: 566px) {
-    width: 80vw;
-  }
+    @media screen and (min-width: 1199px) {
+      width: 1200px;
+    }
+    @media screen and (max-width: 1199px) {
+      width: 960px;
+    }
+    @media screen and (max-width: 991px) {
+      width: 720px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 540px;
+    }
+    @media screen and (max-width: 566px) {
+      width: 80vw;
+    }
 
     margin: auto;
     padding: 50px;
@@ -132,5 +132,14 @@
       right: 25px;
     }
 
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .admin-bar {
+    .top-menu {
+      top: 46px;
+      height: calc(100vh - 46px);
+    }
   }
 }
