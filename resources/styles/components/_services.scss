@@ -58,6 +58,11 @@
       -webkit-box-orient: vertical;
       line-clamp: 3;
       box-orient: vertical;
+      transition: 1s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
 
       @media screen and (max-width: 566px) {
         margin: unset !important;

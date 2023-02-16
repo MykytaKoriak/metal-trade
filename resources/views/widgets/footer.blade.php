@@ -22,12 +22,12 @@
     <div class="footer-contacts">
       <div class="footer-contacts-person">
         @foreach($phone_list as $item)
-          <a href="{!! $item['phone'] !!}" class="footer-contacts-person-phone">
+          <a href="tel:{!! $item['phone'] !!}" class="footer-contacts-person-phone">
             {!! $item['phone'] !!}
           </a>
         @endforeach
         @foreach($email_list as $item)
-          <a href="{!! $item['email'] !!}" class="footer-contacts-person-email">
+          <a href="mailto:{!! $item['email'] !!}" class="footer-contacts-person-email">
               {!! $item['email'] !!}
           </a>
         @endforeach

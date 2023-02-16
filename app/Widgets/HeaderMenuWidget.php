@@ -130,17 +130,41 @@ class HeaderMenuWidget extends SiteOrigin_Widget
             bundle('app')->enqueue();
         }
         $data = [
-            'sitemap' => $instance['sitemap'],
+            'sitemap' => [],
             'social_list' => [],
             'phone_list' => $instance['phone_list'],
             'logo' => wp_get_attachment_url($instance['logo']),
             'dark_logo' => wp_get_attachment_url($instance['dark_logo']),
         ];
+
+        foreach ($instance['sitemap'] as $item) {
+            if(strpos($item['link'], "post: ") !== false){
+                $post_id = str_replace("post: ", "", $item['link']);
+                $data['sitemap'][] = [
+                    'title' =>$item['title'],
+                    'link' => get_permalink(intval($post_id))
+                ];
+            } else{
+                $data['sitemap'][] = [
+                    'title' =>$item['title'],
+                    'link' => $item['link']
+                ];
+            }
+        }
+
         foreach ($instance['social_list'] as $item) {
-            $data['social_list'][] = [
-                'url' => $item['social'],
-                'icon' => wp_get_attachment_url($item['icon'])
-            ];
+            if(strpos($item['social'], "post: ") !== false){
+                $post_id = str_replace("post: ", "", $item['social']);
+                $data['social_list'][] = [
+                    'icon' => wp_get_attachment_url($item['icon']),
+                    'url' => get_permalink(intval($post_id))
+                ];
+            } else{
+                $data['social_list'][] = [
+                    'icon' => wp_get_attachment_url($item['icon']),
+                    'url' => $item['social']
+                ];
+            }
         }
 
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/header-menu.blade.php", $data);

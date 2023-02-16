@@ -52,6 +52,11 @@ class ProductsWidget extends SiteOrigin_Widget
                             'label' => __('Назва продукту.', 'hello-world-widget-text-domain'),
                             'default' => 'Lorem ipsum!',
                         ),
+                        'link' => array(
+                            'type' => 'link',
+                            'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
+                            'default' => 'http://www.example.com',
+                        ),
                         'background' => array(
                             'type' => 'media',
                             'label' => __('Виберіть зображення фону', 'widget-form-fields-text-domain'),
@@ -77,6 +82,22 @@ class ProductsWidget extends SiteOrigin_Widget
         $data = [
             'products' => []
         ];
+        foreach ($instance['a_repeater'] as $item) {
+            if (strpos($item['link'], "post: ") !== false) {
+                $post_id = str_replace("post: ", "", $item['link']);
+                $data['services'][] = [
+                    'title' => $item['title'],
+                    'background' => wp_get_attachment_url($item['background']),
+                    'link' => get_permalink(intval($post_id))
+                ];
+            } else {
+                $data['services'][] = [
+                    'title' => $item['title'],
+                    'background' => wp_get_attachment_url($item['background']),
+                    'link' => $item['link']
+                ];
+            }
+        }
         foreach ($instance['a_repeater'] as $item) {
             $data['products'][] = [
                 'title' => $item['title'],

@@ -248,8 +248,8 @@
             }
 
             &[type=submit] {
-              width: 100px;
-              height: 40px;
+              height: fit-content;
+              width: fit-content;
               margin: auto;
             }
 

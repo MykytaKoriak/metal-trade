@@ -142,10 +142,18 @@ class ContactPageWidget extends SiteOrigin_Widget
             'social_list' => []
         ];
         foreach ($instance['social_list'] as $item) {
-            $data['social_list'][] = [
-                'url' => $item['social'],
-                'icon' => wp_get_attachment_url($item['icon']),
-            ];
+            if(strpos($item['social'], "post: ") !== false){
+                $post_id = str_replace("post: ", "", $item['social']);
+                $data['social_list'][] = [
+                    'icon' => wp_get_attachment_url($item['icon']),
+                    'url' => get_permalink(intval($post_id))
+                ];
+            } else{
+                $data['social_list'][] = [
+                    'icon' => wp_get_attachment_url($item['icon']),
+                    'url' => $item['social']
+                ];
+            }
         }
 
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/contact-page.blade.php", $data);

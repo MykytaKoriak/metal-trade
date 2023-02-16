@@ -52,6 +52,11 @@ class ServicesWidget extends SiteOrigin_Widget
                             'label' => __('Назва послуги.', 'hello-world-widget-text-domain'),
                             'default' => 'Lorem ipsum!',
                         ),
+                        'link' => array(
+                            'type' => 'link',
+                            'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
+                            'default' => 'http://www.example.com',
+                        ),
                         'subtitle' => array(
                             'type' => 'text',
                             'label' => __('Короткий опис послуги.', 'hello-world-widget-text-domain'),
@@ -82,13 +87,26 @@ class ServicesWidget extends SiteOrigin_Widget
         $data = [
             'services' => []
         ];
+
         foreach ($instance['a_repeater'] as $item) {
-            $data['services'][] = [
-                'title' => $item['title'],
-                'subtitle' => $item['subtitle'],
-                'background' => wp_get_attachment_url($item['background']),
-            ];
+            if (strpos($item['link'], "post: ") !== false) {
+                $post_id = str_replace("post: ", "", $item['link']);
+                $data['services'][] = [
+                    'title' => $item['title'],
+                    'subtitle' => $item['subtitle'],
+                    'background' => wp_get_attachment_url($item['background']),
+                    'link' => get_permalink(intval($post_id))
+                ];
+            } else {
+                $data['services'][] = [
+                    'title' => $item['title'],
+                    'subtitle' => $item['subtitle'],
+                    'background' => wp_get_attachment_url($item['background']),
+                    'link' => $item['link']
+                ];
+            }
         }
+
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/services.blade.php", $data);
     }
 }

@@ -147,12 +147,41 @@ class FooterWidget extends SiteOrigin_Widget
         $data = [
             'title' => $instance['title'],
             'sitemap_title' => $instance['sitemap_title'],
-            'sitemap' => $instance['sitemap'],
+            'sitemap' => [],
             'phone_list' => $instance['phone_list'],
             'email_list' => $instance['email_list'],
             'social_title' => $instance['social_title'],
-            'social_list' => $instance['social_list'],
+            'social_list' => [],
         ];
+        foreach ($instance['sitemap'] as $item) {
+            if(strpos($item['link'], "post: ") !== false){
+                $post_id = str_replace("post: ", "", $item['link']);
+                $data['sitemap'][] = [
+                    'title' =>$item['title'],
+                    'link' => get_permalink(intval($post_id))
+                ];
+            } else{
+                $data['sitemap'][] = [
+                    'title' =>$item['title'],
+                    'link' => $item['link']
+                ];
+            }
+        }
+
+        foreach ($instance['social_list'] as $item) {
+            if(strpos($item['social'], "post: ") !== false){
+                $post_id = str_replace("post: ", "", $item['social']);
+                $data['social_list'][] = [
+                    'text' =>$item['text'],
+                    'social' => get_permalink(intval($post_id))
+                ];
+            } else{
+                $data['social_list'][] = [
+                    'text' =>$item['text'],
+                    'social' => $item['social']
+                ];
+            }
+        }
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/footer.blade.php", $data);
     }
 }
