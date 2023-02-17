@@ -85,13 +85,13 @@ class ProductsWidget extends SiteOrigin_Widget
         foreach ($instance['a_repeater'] as $item) {
             if (strpos($item['link'], "post: ") !== false) {
                 $post_id = str_replace("post: ", "", $item['link']);
-                $data['services'][] = [
+                $data['products'][] = [
                     'title' => $item['title'],
                     'background' => wp_get_attachment_url($item['background']),
                     'link' => get_permalink(intval($post_id))
                 ];
             } else {
-                $data['services'][] = [
+                $data['products'][] = [
                     'title' => $item['title'],
                     'background' => wp_get_attachment_url($item['background']),
                     'link' => $item['link']
