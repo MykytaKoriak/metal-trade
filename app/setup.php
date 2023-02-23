@@ -144,3 +144,13 @@ function register_widgets() {
 }
 
 register_widgets();
+
+
+function register_post_types() {
+    foreach (glob(dirname(__FILE__)."/PostTypes/*.php") as $filename)
+    {
+        include $filename;
+    }
+}
+
+register_post_types();
