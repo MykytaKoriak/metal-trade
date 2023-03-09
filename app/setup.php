@@ -126,29 +126,32 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'sage'),
-        'id' => 'sidebar-primary',
-    ] + $config);
+            'name' => __('Primary', 'sage'),
+            'id' => 'sidebar-primary',
+        ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
-    ] + $config);
+            'name' => __('Footer', 'sage'),
+            'id' => 'sidebar-footer',
+        ] + $config);
 });
 
-function register_widgets() {
-    foreach (glob(dirname(__FILE__)."/Widgets/*.php") as $filename)
-    {
-        include $filename;
+
+function register_widgets()
+{
+    if (class_exists("SiteOrigin_Widget")) {
+        foreach (glob(dirname(__FILE__) . "/Widgets/*.php") as $filename) {
+            include $filename;
+        }
     }
 }
 
 register_widgets();
 
 
-function register_post_types() {
-    foreach (glob(dirname(__FILE__)."/PostTypes/*.php") as $filename)
-    {
+function register_post_types()
+{
+    foreach (glob(dirname(__FILE__) . "/PostTypes/*.php") as $filename) {
         include $filename;
     }
 }

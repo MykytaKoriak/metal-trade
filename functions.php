@@ -88,3 +88,10 @@ function asset_name($type, $start, $ext)
 }
 
 
+function mk_metaltrade_dependencies()
+{
+    if (!class_exists("SiteOrigin_Widget"))
+        echo '<div class="error"><p>' . __('Warning: The theme needs plugins Page Builder від SiteOrigin and SiteOrigin Widgets Bundle', 'mk-metal-traide') . '</p></div>';
+}
+
+add_action('admin_notices', 'mk_metaltrade_dependencies');
