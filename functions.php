@@ -95,3 +95,26 @@ function mk_metaltrade_dependencies()
 }
 
 add_action('admin_notices', 'mk_metaltrade_dependencies');
+
+function mkmetal_add_meta_tags()
+{
+    if (function_exists("get_field")) {
+        global $wp;
+        $current_url = home_url(add_query_arg(array(), $wp->request));
+
+        if (get_field("meta_description")) {
+            echo "<meta name=\"description\" content=\"" . get_field("meta_description") . "\">";
+            echo "<meta property=\"og:description\" content=\"" . get_field("meta_description") . "\" />";
+        }
+        if (get_field("meta_keywords")) {
+            echo "<meta name=\"keywords\" content=\"" . get_field("meta_keywords") . "\">";
+        }
+        if (get_field("meta_og_image")) {
+            echo "<meta property=\"og:image\" content=\"" . get_field("meta_og_image") . "\" />";
+        }
+        echo "<meta property=\"og:title\" content=\"" . get_the_title() . "\" />";
+        echo "<meta property=\"og:url\" content=\"" . $current_url . "\" />";
+    }
+}
+
+add_action('wp_head', 'mkmetal_add_meta_tags');

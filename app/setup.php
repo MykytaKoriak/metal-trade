@@ -157,3 +157,13 @@ function register_post_types()
 }
 
 register_post_types();
+
+
+function register_acf_fields_types()
+{
+    foreach (glob(dirname(__FILE__) . "/AcfGroups/*.php") as $filename) {
+        include $filename;
+    }
+}
+
+register_acf_fields_types();
