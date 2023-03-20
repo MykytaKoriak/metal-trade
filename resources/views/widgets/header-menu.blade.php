@@ -1,6 +1,6 @@
 <div class="header">
   <div class="header-container">
-    <a href="/" class="header-logo">
+    <a href="{!! get_home_url() !!}" class="header-logo">
       <img src="{!! $logo !!}" alt="">
     </a>
     <div class="header-burger">
@@ -11,7 +11,7 @@
 <div class="top-menu">
   <div class="top-menu-container">
     <div class="top-menu-links">
-      <a href="/" class="top-menu-links-item top-menu-links-item-logo">
+      <a href="{!! get_home_url() !!}" class="top-menu-links-item top-menu-links-item-logo">
         <img src="{!! $logo !!}" alt="">
       </a>
       @foreach($sitemap as $item)
@@ -41,7 +41,7 @@
   </div>
 </div>
 <div class="fixed-header fixed-header__hidden">
-  <a href="/" class="fixed-header-logo">
+  <a href="{!! get_home_url() !!}" class="fixed-header-logo">
     <img src="{!! $dark_logo !!}" alt="">
   </a>
   <div class="fixed-header-burger">
