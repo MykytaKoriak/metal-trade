@@ -132,6 +132,7 @@
     &-person {
       display: flex;
       flex-direction: column;
+      margin-bottom: 30px;
 
       &-phone {
         color: #FFFFFF;
@@ -149,7 +150,7 @@
       &-email {
         color: #FFFFFF;
         text-decoration: none;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         font-size: 24px;
 
         @media screen and (max-width: 566px) {

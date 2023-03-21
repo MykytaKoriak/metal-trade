@@ -222,8 +222,8 @@ class FooterWidget extends SiteOrigin_Widget
         }
         foreach ($global_data['social_networks'] as $item) {
             $data['social_list'][] = [
-                'text' => $item['text'],
-                'social' => $item['social']
+                'text' => $item['social_title'],
+                'social' => $item['social_url']
             ];
         }
         return $data;

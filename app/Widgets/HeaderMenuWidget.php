@@ -134,6 +134,17 @@ class HeaderMenuWidget extends SiteOrigin_Widget
         if (isset($instance['is_preview'])) {
             bundle('app')->enqueue();
         }
+
+        if (!$instance['use_default']) {
+            $data = $this->processing_data($instance);
+        } else {
+            $data = $this->load_default_data();
+        }
+
+        echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/header-menu.blade.php", $data);
+    }
+
+    private function processing_data($instance){
         $data = [
             'sitemap' => [],
             'social_list' => [],
@@ -171,9 +182,37 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                 ];
             }
         }
-
-        echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/header-menu.blade.php", $data);
+        return $data;
     }
+
+
+    private function load_default_data(){
+        $global_data = get_field("header_general_data", "option");
+
+        $data = [
+            'sitemap' => [],
+            'social_list' => [],
+            'phone_list' => $global_data['phone_numbers'],
+            'logo' => $global_data['light_logo'],
+            'dark_logo' => $global_data['dark_logo'],
+        ];
+
+        foreach ($global_data['menu_links'] as $item) {
+            $data['sitemap'][] = [
+                'title' =>$item['link_name'],
+                'link' => $item['link']
+            ];
+        }
+
+        foreach ($global_data['social_network'] as $item) {
+            $data['social_list'][] = [
+                'icon' => $item['social_icon'],
+                'url' => $item['social_url']
+            ];
+        }
+        return $data;
+    }
+
 }
 
 siteorigin_widget_register('mk-header-menu-widget', __FILE__, 'HeaderMenuWidget');
