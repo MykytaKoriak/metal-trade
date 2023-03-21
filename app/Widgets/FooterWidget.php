@@ -220,16 +220,6 @@ class FooterWidget extends SiteOrigin_Widget
                 'link' => $item['link']
             ];
         }
-//        foreach ($global_data['phone_list'] as $item) {
-//            $data['phone_list'][] = [
-//                'phone' => $item['phone'],
-//            ];
-//        }
-//        foreach ($global_data['email_list'] as $item) {
-//            $data['email_list'][] = [
-//                'email' => $item['email'],
-//            ];
-//        }
         foreach ($global_data['social_networks'] as $item) {
             $data['social_list'][] = [
                 'text' => $item['text'],
