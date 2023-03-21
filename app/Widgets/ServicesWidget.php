@@ -23,12 +23,12 @@ class ServicesWidget extends SiteOrigin_Widget
             'mk-services-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет блоку послуг', 'hello-world-widget-text-domain'),
+            __('Віджет блоку послуг', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет блоку послуг', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет блоку послуг', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -49,17 +49,17 @@ class ServicesWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'title' => array(
                             'type' => 'text',
-                            'label' => __('Назва послуги.', 'hello-world-widget-text-domain'),
+                            'label' => __('Назва послуги.', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum!',
                         ),
                         'link' => array(
                             'type' => 'link',
-                            'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
+                            'label' => __('Посилання на сторінку', 'mk-metal-trade'),
                             'default' => 'http://www.example.com',
                         ),
                         'subtitle' => array(
                             'type' => 'text',
-                            'label' => __('Короткий опис послуги.', 'hello-world-widget-text-domain'),
+                            'label' => __('Короткий опис послуги.', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                         ),
                         'background' => array(

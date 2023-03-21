@@ -23,12 +23,12 @@ class DetailsWidget extends SiteOrigin_Widget
             'mk-details-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет детальної інформації', 'hello-world-widget-text-domain'),
+            __('Віджет детальної інформації', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет детальної інформації', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет детальної інформації', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -49,7 +49,7 @@ class DetailsWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'title' => array(
                             'type' => 'text',
-                            'label' => __('Заголовок', 'hello-world-widget-text-domain'),
+                            'label' => __('Заголовок', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum!',
                         ),
                         'information' => array(

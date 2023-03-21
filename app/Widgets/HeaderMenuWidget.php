@@ -23,12 +23,12 @@ class HeaderMenuWidget extends SiteOrigin_Widget
             'mk-header-menu-widget',
 
             // The name of the widget for display purposes.
-            __('Шапка сайту з меню', 'hello-world-widget-text-domain'),
+            __('Шапка сайту з меню', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Шапка сайту з меню', 'hello-world-widget-text-domain'),
+                'description' => __('Шапка сайту з меню', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -40,7 +40,7 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                 'use_default' => array(
                     'type' => 'checkbox',
                     'label' => __( 'Використовувати глобальні значення', 'mk-metal-trade' ),
-                    'default' => true
+                    'default' => false
                 ),
                 'logo' => array(
                     'type' => 'media',
@@ -70,12 +70,12 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'title' => array(
                             'type' => 'text',
-                            'label' => __('Назва сторінки.', 'hello-world-widget-text-domain'),
+                            'label' => __('Назва сторінки.', 'mk-metal-trade'),
                             'default' => '',
                         ),
                         'link' => array(
                             'type' => 'link',
-                            'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
+                            'label' => __('Посилання на сторінку', 'mk-metal-trade'),
                             'default' => '',
                         ),
                     )
@@ -92,7 +92,7 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'social' => array(
                             'type' => 'link',
-                            'label' => __('Соціальна мережа', 'hello-world-widget-text-domain'),
+                            'label' => __('Соціальна мережа', 'mk-metal-trade'),
                             'default' => '',
                         ),
                         'icon' => array(
@@ -117,7 +117,7 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'phone' => array(
                             'type' => 'text',
-                            'label' => __('Номер телефону', 'hello-world-widget-text-domain'),
+                            'label' => __('Номер телефону', 'mk-metal-trade'),
                             'default' => '',
                         ),
                     )

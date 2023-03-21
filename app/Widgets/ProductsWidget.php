@@ -23,12 +23,12 @@ class ProductsWidget extends SiteOrigin_Widget
             'mk-products-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет блоку продукції', 'hello-world-widget-text-domain'),
+            __('Віджет блоку продукції', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет блоку продукції', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет блоку продукції', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -49,12 +49,12 @@ class ProductsWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'title' => array(
                             'type' => 'text',
-                            'label' => __('Назва продукту.', 'hello-world-widget-text-domain'),
+                            'label' => __('Назва продукту.', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum!',
                         ),
                         'link' => array(
                             'type' => 'link',
-                            'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
+                            'label' => __('Посилання на сторінку', 'mk-metal-trade'),
                             'default' => 'http://www.example.com',
                         ),
                         'background' => array(

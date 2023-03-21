@@ -295,7 +295,7 @@ if( function_exists('acf_add_local_field_group') ):
                             array(
                                 'key' => 'field_640e4aa5d14f8',
                                 'label' => ' Номер телефону',
-                                'name' => ' phone',
+                                'name' => 'phone',
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',

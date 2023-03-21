@@ -23,12 +23,12 @@ class FooterWidget extends SiteOrigin_Widget
             'mk-footer-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет футера', 'hello-world-widget-text-domain'),
+            __('Віджет футера', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет футера', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет футера', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -39,17 +39,17 @@ class FooterWidget extends SiteOrigin_Widget
             array(
                 'use_default' => array(
                     'type' => 'checkbox',
-                    'label' => __( 'Використовувати глобальні значення', 'mk-metal-trade' ),
-                    'default' => true
+                    'label' => __('Використовувати глобальні значення', 'mk-metal-trade'),
+                    'default' => false
                 ),
                 'title' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для футера.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для футера.', 'mk-metal-trade'),
                     'default' => '',
                 ),
                 'sitemap_title' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для карти сайту.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для карти сайту.', 'mk-metal-trade'),
                     'default' => '',
                 ),
                 'sitemap' => array(
@@ -64,12 +64,12 @@ class FooterWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'title' => array(
                             'type' => 'text',
-                            'label' => __('Назва сторінки.', 'hello-world-widget-text-domain'),
+                            'label' => __('Назва сторінки.', 'mk-metal-trade'),
                             'default' => '',
                         ),
                         'link' => array(
                             'type' => 'link',
-                            'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
+                            'label' => __('Посилання на сторінку', 'mk-metal-trade'),
                             'default' => '',
                         ),
                     )
@@ -86,7 +86,7 @@ class FooterWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'phone' => array(
                             'type' => 'text',
-                            'label' => __('Номер телефону', 'hello-world-widget-text-domain'),
+                            'label' => __('Номер телефону', 'mk-metal-trade'),
                             'default' => '',
                         ),
                     )
@@ -103,14 +103,14 @@ class FooterWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'email' => array(
                             'type' => 'text',
-                            'label' => __('Електронна пошта', 'hello-world-widget-text-domain'),
+                            'label' => __('Електронна пошта', 'mk-metal-trade'),
                             'default' => '',
                         ),
                     )
                 ),
                 'social_title' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для підблоку соціальних мереж.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для підблоку соціальних мереж.', 'mk-metal-trade'),
                     'default' => '',
                 ),
                 'social_list' => array(
@@ -125,12 +125,12 @@ class FooterWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'social' => array(
                             'type' => 'link',
-                            'label' => __('Соціальна мережа', 'hello-world-widget-text-domain'),
+                            'label' => __('Соціальна мережа', 'mk-metal-trade'),
                             'default' => '',
                         ),
                         'text' => array(
                             'type' => 'text',
-                            'label' => __('Назва соціальної мережі.', 'hello-world-widget-text-domain'),
+                            'label' => __('Назва соціальної мережі.', 'mk-metal-trade'),
                             'default' => '',
                         ),
 
@@ -149,6 +149,18 @@ class FooterWidget extends SiteOrigin_Widget
         if (isset($instance['is_preview'])) {
             bundle('app')->enqueue();
         }
+
+        if (!$instance['use_default']) {
+            $data = $this->processing_data($instance);
+        } else {
+            $data = $this->load_default_data();
+        }
+
+        echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/footer.blade.php", $data);
+    }
+
+    private function processing_data($instance)
+    {
         $data = [
             'title' => $instance['title'],
             'sitemap_title' => $instance['sitemap_title'],
@@ -159,35 +171,72 @@ class FooterWidget extends SiteOrigin_Widget
             'social_list' => [],
         ];
         foreach ($instance['sitemap'] as $item) {
-            if(strpos($item['link'], "post: ") !== false){
+            if (strpos($item['link'], "post: ") !== false) {
                 $post_id = str_replace("post: ", "", $item['link']);
                 $data['sitemap'][] = [
-                    'title' =>$item['title'],
+                    'title' => $item['title'],
                     'link' => get_permalink(intval($post_id))
                 ];
-            } else{
+            } else {
                 $data['sitemap'][] = [
-                    'title' =>$item['title'],
+                    'title' => $item['title'],
                     'link' => $item['link']
                 ];
             }
         }
 
         foreach ($instance['social_list'] as $item) {
-            if(strpos($item['social'], "post: ") !== false){
+            if (strpos($item['social'], "post: ") !== false) {
                 $post_id = str_replace("post: ", "", $item['social']);
                 $data['social_list'][] = [
-                    'text' =>$item['text'],
+                    'text' => $item['text'],
                     'social' => get_permalink(intval($post_id))
                 ];
-            } else{
+            } else {
                 $data['social_list'][] = [
-                    'text' =>$item['text'],
+                    'text' => $item['text'],
                     'social' => $item['social']
                 ];
             }
         }
-        echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/footer.blade.php", $data);
+        return $data;
+    }
+
+    private function load_default_data()
+    {
+        $global_data = get_field("footer_general_data", "option");
+        $data = [
+            'title' => $global_data['footer_title'],
+            'sitemap_title' => $global_data['sitemap_title'],
+            'sitemap' => [],
+            'phone_list' => $global_data['phone_list'],
+            'email_list' => $global_data['email_list'],
+            'social_title' => $global_data['social_title'],
+            'social_list' => $global_data['social_networks'],
+        ];
+        foreach ($global_data['sitemap'] as $item) {
+            $data['sitemap'][] = [
+                'title' => $item['link_name'],
+                'link' => $item['link']
+            ];
+        }
+//        foreach ($global_data['phone_list'] as $item) {
+//            $data['phone_list'][] = [
+//                'phone' => $item['phone'],
+//            ];
+//        }
+//        foreach ($global_data['email_list'] as $item) {
+//            $data['email_list'][] = [
+//                'email' => $item['email'],
+//            ];
+//        }
+        foreach ($global_data['social_networks'] as $item) {
+            $data['social_list'][] = [
+                'text' => $item['text'],
+                'social' => $item['social']
+            ];
+        }
+        return $data;
     }
 }
 

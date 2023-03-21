@@ -23,12 +23,12 @@ class ContactsWidget extends SiteOrigin_Widget
             'mk-contacts-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет блоку контактів', 'hello-world-widget-text-domain'),
+            __('Віджет блоку контактів', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет блоку контактів', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет блоку контактів', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -39,7 +39,7 @@ class ContactsWidget extends SiteOrigin_Widget
             array(
                 'title' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для блоку контактів.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для блоку контактів.', 'mk-metal-trade'),
                     'default' => 'Hello world!',
                 ),
                 'address_list' => array(
@@ -54,18 +54,18 @@ class ContactsWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'address' => array(
                             'type' => 'text',
-                            'label' => __('Адресса', 'hello-world-widget-text-domain'),
+                            'label' => __('Адресса', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum!',
                         ),
                     )
                 ),
                 'mobile_form_title' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для форми контактів в мобільному розширенні', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для форми контактів в мобільному розширенні', 'mk-metal-trade'),
                     'default' => 'Напишіть нам',
                 ),'form' => array(
                     'type' => 'text',
-                    'label' => __('Shortcode для форми контактів.', 'hello-world-widget-text-domain'),
+                    'label' => __('Shortcode для форми контактів.', 'mk-metal-trade'),
                     'default' => '[]',
                 ),
                 'email_list' => array(
@@ -80,7 +80,7 @@ class ContactsWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'email' => array(
                             'type' => 'text',
-                            'label' => __('Електронна пошта', 'hello-world-widget-text-domain'),
+                            'label' => __('Електронна пошта', 'mk-metal-trade'),
                             'default' => 'example@example.com',
                         ),
                     )
@@ -97,7 +97,7 @@ class ContactsWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'phone' => array(
                             'type' => 'text',
-                            'label' => __('Номер телефону', 'hello-world-widget-text-domain'),
+                            'label' => __('Номер телефону', 'mk-metal-trade'),
                             'default' => '+380957777777',
                         ),
                     )
@@ -114,7 +114,7 @@ class ContactsWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'social' => array(
                             'type' => 'link',
-                            'label' => __('Соціальна мережа', 'hello-world-widget-text-domain'),
+                            'label' => __('Соціальна мережа', 'mk-metal-trade'),
                             'default' => 'http://www.example.com',
                         ),
                         'icon' => array(
@@ -129,7 +129,7 @@ class ContactsWidget extends SiteOrigin_Widget
                 ),
                 'map' => array(
                     'type' => 'text',
-                    'label' => __('Shortcode для мапи.', 'hello-world-widget-text-domain'),
+                    'label' => __('Shortcode для мапи.', 'mk-metal-trade'),
                     'default' => '[]',
                 ),
             ),

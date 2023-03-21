@@ -23,12 +23,12 @@ class ContactPageWidget extends SiteOrigin_Widget
             'mk-contact-page-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет сторінки контактів', 'hello-world-widget-text-domain'),
+            __('Віджет сторінки контактів', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет сторінки контактів', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет сторінки контактів', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -39,12 +39,12 @@ class ContactPageWidget extends SiteOrigin_Widget
             array(
                 'map' => array(
                     'type' => 'text',
-                    'label' => __('Shortcode для мапи.', 'hello-world-widget-text-domain'),
+                    'label' => __('Shortcode для мапи.', 'mk-metal-trade'),
                     'default' => '[]',
                 ),
                 'title' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для блоку контактів.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для блоку контактів.', 'mk-metal-trade'),
                     'default' => 'Hello world!',
                 ),
                 'contact_blocks' => array(
@@ -59,24 +59,24 @@ class ContactPageWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'title' => array(
                             'type' => 'text',
-                            'label' => __('Заголовок блоку.', 'hello-world-widget-text-domain'),
+                            'label' => __('Заголовок блоку.', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum!',
                         ),
                         'info_1' => array(
                             'type' => 'text',
-                            'label' => __('Інформація блоку.', 'hello-world-widget-text-domain'),
+                            'label' => __('Інформація блоку.', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum!',
                         ),
                         'info_2' => array(
                             'type' => 'text',
-                            'label' => __('Інформація блоку.', 'hello-world-widget-text-domain'),
+                            'label' => __('Інформація блоку.', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum!',
                         ),
                     )
                 ),
                 'join_title' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для підблоку соціальних мереж.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для підблоку соціальних мереж.', 'mk-metal-trade'),
                     'default' => 'Hello world!',
                 ),
                 'social_list' => array(
@@ -91,7 +91,7 @@ class ContactPageWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'social' => array(
                             'type' => 'link',
-                            'label' => __('Соціальна мережа', 'hello-world-widget-text-domain'),
+                            'label' => __('Соціальна мережа', 'mk-metal-trade'),
                             'default' => 'http://www.example.com',
                         ),
                         'icon' => array(
@@ -106,17 +106,17 @@ class ContactPageWidget extends SiteOrigin_Widget
                 ),
                 'button_text' => array(
                     'type' => 'text',
-                    'label' => __('Текст на кнопці.', 'hello-world-widget-text-domain'),
+                    'label' => __('Текст на кнопці.', 'mk-metal-trade'),
                     'default' => 'Hello world!',
                 ),
                 'popup_title' => array(
                     'type' => 'Заголовок для вспливаючого вікна',
-                    'label' => __('Заголовок для блоку контактів.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для блоку контактів.', 'mk-metal-trade'),
                     'default' => 'Hello world!',
                 ),
                 'popup_form' => array(
                     'type' => 'text',
-                    'label' => __('Shortcode для форми.', 'hello-world-widget-text-domain'),
+                    'label' => __('Shortcode для форми.', 'mk-metal-trade'),
                     'default' => '[]',
                 ),
             ),

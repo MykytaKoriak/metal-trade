@@ -23,12 +23,12 @@ class TaglineWidget extends SiteOrigin_Widget
             'mk-tagline-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет слоган', 'hello-world-widget-text-domain'),
+            __('Віджет слоган', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет слоган', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет слоган', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 

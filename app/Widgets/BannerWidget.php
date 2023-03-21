@@ -23,12 +23,12 @@ class BannerWidget extends SiteOrigin_Widget
             'mk-banner-widget',
 
             // The name of the widget for display purposes.
-            __('Віджет головного банеру', 'hello-world-widget-text-domain'),
+            __('Віджет головного банеру', 'mk-metal-trade'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Віджет головного банеру', 'hello-world-widget-text-domain'),
+                'description' => __('Віджет головного банеру', 'mk-metal-trade'),
                 'help' => 'https://github.com/MykytaKoriak/metal-trade',
             ),
 
@@ -39,7 +39,7 @@ class BannerWidget extends SiteOrigin_Widget
             array(
                 'text' => array(
                     'type' => 'text',
-                    'label' => __('Заголовок для баннера.', 'hello-world-widget-text-domain'),
+                    'label' => __('Заголовок для баннера.', 'mk-metal-trade'),
                     'default' => 'Hello world!',
                 ),
                 'background' => array(
