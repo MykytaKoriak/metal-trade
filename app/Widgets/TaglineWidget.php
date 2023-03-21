@@ -39,7 +39,7 @@ class TaglineWidget extends SiteOrigin_Widget
             array(
                 'tagline' => array(
                     'type' => 'tinymce',
-                    'label' => __( 'Введіть слоган', 'widget-form-fields-text-domain' ),
+                    'label' => __( 'Введіть слоган', 'mk-metal-trade' ),
                     'default' => 'Ми - це ті, про кого ви думаєте, коли хочете, щоб це було зроблено правильно!',
                     'rows' => 10,
                     'default_editor' => 'html',

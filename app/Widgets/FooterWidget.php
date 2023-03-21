@@ -37,19 +37,24 @@ class FooterWidget extends SiteOrigin_Widget
 
             // The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
+                'use_default' => array(
+                    'type' => 'checkbox',
+                    'label' => __( 'Використовувати глобальні значення', 'mk-metal-trade' ),
+                    'default' => true
+                ),
                 'title' => array(
                     'type' => 'text',
                     'label' => __('Заголовок для футера.', 'hello-world-widget-text-domain'),
-                    'default' => 'Hello world!',
+                    'default' => '',
                 ),
                 'sitemap_title' => array(
                     'type' => 'text',
                     'label' => __('Заголовок для карти сайту.', 'hello-world-widget-text-domain'),
-                    'default' => 'Hello world!',
+                    'default' => '',
                 ),
                 'sitemap' => array(
                     'type' => 'repeater',
-                    'label' => __('Карта сайту', 'widget-form-fields-text-domain'),
+                    'label' => __('Карта сайту', 'mk-metal-trade'),
                     'item_name' => __('Посилання', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -60,18 +65,18 @@ class FooterWidget extends SiteOrigin_Widget
                         'title' => array(
                             'type' => 'text',
                             'label' => __('Назва сторінки.', 'hello-world-widget-text-domain'),
-                            'default' => 'Lorem ipsum!',
+                            'default' => '',
                         ),
                         'link' => array(
                             'type' => 'link',
                             'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
-                            'default' => 'http://www.example.com',
+                            'default' => '',
                         ),
                     )
                 ),
                 'phone_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список номерів телефонів', 'widget-form-fields-text-domain'),
+                    'label' => __('Список номерів телефонів', 'mk-metal-trade'),
                     'item_name' => __('Номер телефону', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -82,13 +87,13 @@ class FooterWidget extends SiteOrigin_Widget
                         'phone' => array(
                             'type' => 'text',
                             'label' => __('Номер телефону', 'hello-world-widget-text-domain'),
-                            'default' => '+380957777777',
+                            'default' => '',
                         ),
                     )
                 ),
                 'email_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список електронних пошт', 'widget-form-fields-text-domain'),
+                    'label' => __('Список електронних пошт', 'mk-metal-trade'),
                     'item_name' => __('Електронна пошта', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -99,18 +104,18 @@ class FooterWidget extends SiteOrigin_Widget
                         'email' => array(
                             'type' => 'text',
                             'label' => __('Електронна пошта', 'hello-world-widget-text-domain'),
-                            'default' => 'example@example.com',
+                            'default' => '',
                         ),
                     )
                 ),
                 'social_title' => array(
                     'type' => 'text',
                     'label' => __('Заголовок для підблоку соціальних мереж.', 'hello-world-widget-text-domain'),
-                    'default' => 'Hello world!',
+                    'default' => '',
                 ),
                 'social_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список соціальних мереж', 'widget-form-fields-text-domain'),
+                    'label' => __('Список соціальних мереж', 'mk-metal-trade'),
                     'item_name' => __('Соціальна мережа', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -121,12 +126,12 @@ class FooterWidget extends SiteOrigin_Widget
                         'social' => array(
                             'type' => 'link',
                             'label' => __('Соціальна мережа', 'hello-world-widget-text-domain'),
-                            'default' => 'http://www.example.com',
+                            'default' => '',
                         ),
                         'text' => array(
                             'type' => 'text',
                             'label' => __('Назва соціальної мережі.', 'hello-world-widget-text-domain'),
-                            'default' => 'LINKEGRAM',
+                            'default' => '',
                         ),
 
                     )

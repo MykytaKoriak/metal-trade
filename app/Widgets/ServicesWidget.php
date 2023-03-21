@@ -39,7 +39,7 @@ class ServicesWidget extends SiteOrigin_Widget
             array(
                 'a_repeater' => array(
                     'type' => 'repeater',
-                    'label' => __('Послуги', 'widget-form-fields-text-domain'),
+                    'label' => __('Послуги', 'mk-metal-trade'),
                     'item_name' => __('Послуга', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -64,9 +64,9 @@ class ServicesWidget extends SiteOrigin_Widget
                         ),
                         'background' => array(
                             'type' => 'media',
-                            'label' => __('Виберіть зображення фону', 'widget-form-fields-text-domain'),
-                            'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                            'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
+                            'label' => __('Виберіть зображення фону', 'mk-metal-trade'),
+                            'choose' => __('Виберіть зображення', 'mk-metal-trade'),
+                            'update' => __('Задати зображення', 'mk-metal-trade'),
                             'library' => 'image',
                             'fallback' => false
                         )

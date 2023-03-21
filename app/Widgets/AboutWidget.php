@@ -39,9 +39,9 @@ class AboutWidget extends SiteOrigin_Widget
             array(
                 'background' => array(
                     'type' => 'media',
-                    'label' => __('Виберіть зображення фону', 'widget-form-fields-text-domain'),
-                    'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                    'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
+                    'label' => __('Виберіть зображення фону', 'mk-metal-trade'),
+                    'choose' => __('Виберіть зображення', 'mk-metal-trade'),
+                    'update' => __('Задати зображення', 'mk-metal-trade'),
                     'library' => 'image',
                     'fallback' => false
                 ),
@@ -52,7 +52,7 @@ class AboutWidget extends SiteOrigin_Widget
                 ),
                 'content' => array(
                     'type' => 'tinymce',
-                    'label' => __('Введіть тест про компанію', 'widget-form-fields-text-domain'),
+                    'label' => __('Введіть тест про компанію', 'mk-metal-trade'),
                     'default' => 'Ми - це ті, про кого ви думаєте, коли хочете, щоб це було зроблено правильно!',
                     'rows' => 10,
                     'default_editor' => 'html',

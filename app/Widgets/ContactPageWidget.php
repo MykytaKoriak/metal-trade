@@ -49,7 +49,7 @@ class ContactPageWidget extends SiteOrigin_Widget
                 ),
                 'contact_blocks' => array(
                     'type' => 'repeater',
-                    'label' => __('Контактна інформація', 'widget-form-fields-text-domain'),
+                    'label' => __('Контактна інформація', 'mk-metal-trade'),
                     'item_name' => __('Блок контактної інформації', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -81,7 +81,7 @@ class ContactPageWidget extends SiteOrigin_Widget
                 ),
                 'social_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список соціальних мереж', 'widget-form-fields-text-domain'),
+                    'label' => __('Список соціальних мереж', 'mk-metal-trade'),
                     'item_name' => __('Соціальна мережа', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -96,9 +96,9 @@ class ContactPageWidget extends SiteOrigin_Widget
                         ),
                         'icon' => array(
                             'type' => 'media',
-                            'label' => __('Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
-                            'choose' => __('Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
-                            'update' => __('Задати Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
+                            'label' => __('Виберіть значок соціальної мережі', 'mk-metal-trade'),
+                            'choose' => __('Виберіть значок соціальної мережі', 'mk-metal-trade'),
+                            'update' => __('Задати Виберіть значок соціальної мережі', 'mk-metal-trade'),
                             'library' => 'image',
                             'fallback' => false
                         )

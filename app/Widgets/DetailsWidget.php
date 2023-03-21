@@ -39,7 +39,7 @@ class DetailsWidget extends SiteOrigin_Widget
             array(
                 'details_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список блоків', 'widget-form-fields-text-domain'),
+                    'label' => __('Список блоків', 'mk-metal-trade'),
                     'item_name' => __('Блок детальної інформації', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -54,7 +54,7 @@ class DetailsWidget extends SiteOrigin_Widget
                         ),
                         'information' => array(
                             'type' => 'tinymce',
-                            'label' => __('Інформація', 'widget-form-fields-text-domain'),
+                            'label' => __('Інформація', 'mk-metal-trade'),
                             'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 In sit amet sem ac ligula rutrum auctor.
 Nullam fringilla sapien augue, lobortis efficitur neque venenatis vitae.
@@ -73,9 +73,9 @@ vestibulum dui. Sed eget lacus vitae nulla sollicitudin vestibulum id eu lorem.'
                         ),
                         'background' => array(
                             'type' => 'media',
-                            'label' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                            'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                            'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
+                            'label' => __('Виберіть зображення', 'mk-metal-trade'),
+                            'choose' => __('Виберіть зображення', 'mk-metal-trade'),
+                            'update' => __('Задати зображення', 'mk-metal-trade'),
                             'library' => 'image',
                             'fallback' => false
                         )

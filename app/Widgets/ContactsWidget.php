@@ -44,7 +44,7 @@ class ContactsWidget extends SiteOrigin_Widget
                 ),
                 'address_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список адресс', 'widget-form-fields-text-domain'),
+                    'label' => __('Список адресс', 'mk-metal-trade'),
                     'item_name' => __('Адресса', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -70,7 +70,7 @@ class ContactsWidget extends SiteOrigin_Widget
                 ),
                 'email_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список електронних пошт', 'widget-form-fields-text-domain'),
+                    'label' => __('Список електронних пошт', 'mk-metal-trade'),
                     'item_name' => __('Електронна пошта', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -87,7 +87,7 @@ class ContactsWidget extends SiteOrigin_Widget
                 ),
                 'phone_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список номерів телефонів', 'widget-form-fields-text-domain'),
+                    'label' => __('Список номерів телефонів', 'mk-metal-trade'),
                     'item_name' => __('Номер телефону', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -104,7 +104,7 @@ class ContactsWidget extends SiteOrigin_Widget
                 ),
                 'social_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список соціальних мереж', 'widget-form-fields-text-domain'),
+                    'label' => __('Список соціальних мереж', 'mk-metal-trade'),
                     'item_name' => __('Соціальна мережа', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -119,9 +119,9 @@ class ContactsWidget extends SiteOrigin_Widget
                         ),
                         'icon' => array(
                             'type' => 'media',
-                            'label' => __('Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
-                            'choose' => __('Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
-                            'update' => __('Задати Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
+                            'label' => __('Виберіть значок соціальної мережі', 'mk-metal-trade'),
+                            'choose' => __('Виберіть значок соціальної мережі', 'mk-metal-trade'),
+                            'update' => __('Задати Виберіть значок соціальної мережі', 'mk-metal-trade'),
                             'library' => 'image',
                             'fallback' => false
                         )

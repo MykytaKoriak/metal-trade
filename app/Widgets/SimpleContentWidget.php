@@ -44,9 +44,9 @@ class SimpleContentWidget extends SiteOrigin_Widget
                 ),
                 'background' => array(
                     'type' => 'media',
-                    'label' => __('Виберіть зображення фону', 'widget-form-fields-text-domain'),
-                    'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                    'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
+                    'label' => __('Виберіть зображення фону', 'mk-metal-trade'),
+                    'choose' => __('Виберіть зображення', 'mk-metal-trade'),
+                    'update' => __('Задати зображення', 'mk-metal-trade'),
                     'library' => 'image',
                     'fallback' => false
                 )

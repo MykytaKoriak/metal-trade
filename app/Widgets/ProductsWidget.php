@@ -39,7 +39,7 @@ class ProductsWidget extends SiteOrigin_Widget
             array(
                 'a_repeater' => array(
                     'type' => 'repeater',
-                    'label' => __('Продукція', 'widget-form-fields-text-domain'),
+                    'label' => __('Продукція', 'mk-metal-trade'),
                     'item_name' => __('Продукт', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -59,9 +59,9 @@ class ProductsWidget extends SiteOrigin_Widget
                         ),
                         'background' => array(
                             'type' => 'media',
-                            'label' => __('Виберіть зображення фону', 'widget-form-fields-text-domain'),
-                            'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                            'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
+                            'label' => __('Виберіть зображення фону', 'mk-metal-trade'),
+                            'choose' => __('Виберіть зображення', 'mk-metal-trade'),
+                            'update' => __('Задати зображення', 'mk-metal-trade'),
                             'library' => 'image',
                             'fallback' => false
                         )

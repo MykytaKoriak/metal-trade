@@ -37,25 +37,30 @@ class HeaderMenuWidget extends SiteOrigin_Widget
 
             // The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
+                'use_default' => array(
+                    'type' => 'checkbox',
+                    'label' => __( 'Використовувати глобальні значення', 'mk-metal-trade' ),
+                    'default' => true
+                ),
                 'logo' => array(
                     'type' => 'media',
-                    'label' => __('Виберіть зображення логотипу', 'widget-form-fields-text-domain'),
-                    'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                    'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
+                    'label' => __('Виберіть зображення логотипу', 'mk-metal-trade'),
+                    'choose' => __('Виберіть зображення', 'mk-metal-trade'),
+                    'update' => __('Задати зображення', 'mk-metal-trade'),
                     'library' => 'image',
                     'fallback' => false
                 ),
                 'dark_logo' => array(
                     'type' => 'media',
-                    'label' => __('Виберіть зображення темного логотипу', 'widget-form-fields-text-domain'),
-                    'choose' => __('Виберіть зображення', 'widget-form-fields-text-domain'),
-                    'update' => __('Задати зображення', 'widget-form-fields-text-domain'),
+                    'label' => __('Виберіть зображення темного логотипу', 'mk-metal-trade'),
+                    'choose' => __('Виберіть зображення', 'mk-metal-trade'),
+                    'update' => __('Задати зображення', 'mk-metal-trade'),
                     'library' => 'image',
                     'fallback' => false
                 ),
                 'sitemap' => array(
                     'type' => 'repeater',
-                    'label' => __('Меню', 'widget-form-fields-text-domain'),
+                    'label' => __('Меню', 'mk-metal-trade'),
                     'item_name' => __('Посилання', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -66,18 +71,18 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                         'title' => array(
                             'type' => 'text',
                             'label' => __('Назва сторінки.', 'hello-world-widget-text-domain'),
-                            'default' => 'Lorem ipsum!',
+                            'default' => '',
                         ),
                         'link' => array(
                             'type' => 'link',
                             'label' => __('Посилання на сторінку', 'hello-world-widget-text-domain'),
-                            'default' => 'http://www.example.com',
+                            'default' => '',
                         ),
                     )
                 ),
                 'social_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список соціальних мереж', 'widget-form-fields-text-domain'),
+                    'label' => __('Список соціальних мереж', 'mk-metal-trade'),
                     'item_name' => __('Соціальна мережа', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -88,13 +93,13 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                         'social' => array(
                             'type' => 'link',
                             'label' => __('Соціальна мережа', 'hello-world-widget-text-domain'),
-                            'default' => 'http://www.example.com',
+                            'default' => '',
                         ),
                         'icon' => array(
                             'type' => 'media',
-                            'label' => __('Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
-                            'choose' => __('Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
-                            'update' => __('Задати Виберіть значок соціальної мережі', 'widget-form-fields-text-domain'),
+                            'label' => __('Виберіть значок соціальної мережі', 'mk-metal-trade'),
+                            'choose' => __('Виберіть значок соціальної мережі', 'mk-metal-trade'),
+                            'update' => __('Задати Виберіть значок соціальної мережі', 'mk-metal-trade'),
                             'library' => 'image',
                             'fallback' => false
                         )
@@ -102,7 +107,7 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                 ),
                 'phone_list' => array(
                     'type' => 'repeater',
-                    'label' => __('Список номерів телефонів', 'widget-form-fields-text-domain'),
+                    'label' => __('Список номерів телефонів', 'mk-metal-trade'),
                     'item_name' => __('Номер телефону', 'siteorigin-widgets'),
                     'item_label' => array(
                         'selector' => "[id*='repeat_text']",
@@ -113,7 +118,7 @@ class HeaderMenuWidget extends SiteOrigin_Widget
                         'phone' => array(
                             'type' => 'text',
                             'label' => __('Номер телефону', 'hello-world-widget-text-domain'),
-                            'default' => '+380957777777',
+                            'default' => '',
                         ),
                     )
                 ),
