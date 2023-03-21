@@ -105,11 +105,18 @@ function mkmetal_add_meta_tags()
         if (get_field("meta_description")) {
             echo "<meta name=\"description\" content=\"" . get_field("meta_description") . "\">";
             echo "<meta property=\"og:description\" content=\"" . get_field("meta_description") . "\" />";
+        } elseif (false) {
+            echo "<meta name=\"description\" content=\"" . get_field("meta_description", '') . "\">";
+            echo "<meta property=\"og:description\" content=\"" . get_field("meta_description", '') . "\" />";
         }
         if (get_field("meta_keywords")) {
             echo "<meta name=\"keywords\" content=\"" . get_field("meta_keywords") . "\">";
+        } elseif (false) {
+            echo "<meta name=\"keywords\" content=\"" . get_field("meta_keywords") . "\">";
         }
         if (get_field("meta_og_image")) {
+            echo "<meta property=\"og:image\" content=\"" . get_field("meta_og_image") . "\" />";
+        }  elseif (false) {
             echo "<meta property=\"og:image\" content=\"" . get_field("meta_og_image") . "\" />";
         }
         echo "<meta property=\"og:title\" content=\"" . get_the_title() . "\" />";

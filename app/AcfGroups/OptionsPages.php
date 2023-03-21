@@ -476,7 +476,7 @@ if( function_exists('acf_add_local_field_group') ):
             array(
                 'key' => 'field_640e46a8ae8ee',
                 'label' => 'Налаштування меню за замовчуванням',
-                'name' => ' header_general_data',
+                'name' => 'header_general_data',
                 'aria-label' => '',
                 'type' => 'group',
                 'instructions' => '',
