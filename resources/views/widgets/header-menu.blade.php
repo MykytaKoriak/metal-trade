@@ -31,7 +31,7 @@
       </div>
       <div class="top-menu-social-phones">
         @foreach($phone_list as $item)
-          <a href="{!! $item['phone'] !!}" class="top-menu-social-phones-item">{!! $item['phone'] !!}</a>
+          <a href="tel:{!! $item['phone'] !!}" class="top-menu-social-phones-item">{!! $item['phone'] !!}</a>
         @endforeach
       </div>
     </div>
