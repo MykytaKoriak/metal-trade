@@ -2,22 +2,7 @@
   display: flex;
 
   &-container {
-    @media screen and (min-width: 1199px) {
-      width: 1200px;
-    }
-    @media screen and (max-width: 1199px) {
-      width: 960px;
-    }
-    @media screen and (max-width: 991px) {
-      width: 720px;
-    }
-    @media screen and (max-width: 767px) {
-      width: 540px;
-    }
-    @media screen and (max-width: 566px) {
-      width: 80vw;
-    }
-
+    width: 100%;
     margin: 108px auto 0 auto;
   }
 
