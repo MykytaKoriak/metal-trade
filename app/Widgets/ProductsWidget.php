@@ -37,6 +37,11 @@ class ProductsWidget extends SiteOrigin_Widget
 
             // The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
+                'block_title' => array(
+                    'type' => 'text',
+                    'label' => __('Заголовок блоку', 'mk-metal-trade'),
+                    'default' => 'Наші продукти',
+                ),
                 'a_repeater' => array(
                     'type' => 'repeater',
                     'label' => __('Продукція', 'mk-metal-trade'),
@@ -80,6 +85,7 @@ class ProductsWidget extends SiteOrigin_Widget
             bundle('app')->enqueue();
         }
         $data = [
+            'block_title' => $instance['block_title'],
             'products' => []
         ];
         foreach ($instance['a_repeater'] as $item) {

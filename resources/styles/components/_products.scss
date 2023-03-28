@@ -1,27 +1,35 @@
 .products {
   padding: 20px 0 30px 0;
 
+  &-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "FuturaPT", Arial, sans-serif;
+  }
+
   &-container {
     width: 100%;
     margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 800px) {
+      width: 80%;
+    }
   }
 
   &-element {
     height: 290px;
-    width: 30%;
+    width: 100%;
+    display: block;
     margin: 0 15px 20px 15px;
-    //margin-bottom: 50px;
     background-size: cover;
     background-position: center;
-    //margin-right: 5%;
 
     @media screen and (max-width: 1199px) {
-      width: 45%;
       margin-right: 10%;
-
 
       &:nth-child(2n+2) {
         margin-right: 0;
@@ -77,5 +85,21 @@
 
   .slick-slide {
     margin: 0 20px;
+  }
+
+  .slick-prev.slick-arrow::before {
+    content: url("../images/left-arrow.png");
+    //background-image: url("../images/left-arrow.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slick-next.slick-arrow::before {
+    content: url("../images/right-arrow.png");
+    //background-image: url("../images/right-arrow.png");
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
   }
 }
