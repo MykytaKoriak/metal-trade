@@ -9,6 +9,7 @@ if ($('#banner').length) {
             hB = hT + elementHeight,
             needPosition = hB - 120,
             wS = $(this).scrollTop();
+
         if (wS > needPosition) {
             if (fixedHeader.hasClass("fixed-header__hidden")) {
                 fixedHeader.removeClass("fixed-header__hidden")
@@ -19,4 +20,9 @@ if ($('#banner').length) {
             }
         }
     });
+} else {
+    var fixedHeader = $('.fixed-header'),
+        header = $('.header');
+    fixedHeader.removeClass("fixed-header__hidden");
+    header.css('display', 'none');
 }

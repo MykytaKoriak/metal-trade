@@ -25,7 +25,8 @@
     width: 100%;
     display: block;
     margin: 0 15px 20px 15px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 
     @media screen and (max-width: 1199px) {
