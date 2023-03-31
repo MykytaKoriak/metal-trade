@@ -110,8 +110,8 @@ class ContactPageWidget extends SiteOrigin_Widget
                     'default' => 'Hello world!',
                 ),
                 'popup_title' => array(
-                    'type' => 'Заголовок для вспливаючого вікна',
-                    'label' => __('Заголовок для блоку контактів.', 'mk-metal-trade'),
+                    'type' => 'text',
+                    'label' => __('Заголовок для вспливаючого вікна.', 'mk-metal-trade'),
                     'default' => 'Hello world!',
                 ),
                 'popup_form' => array(
