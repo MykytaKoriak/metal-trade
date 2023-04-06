@@ -57,6 +57,17 @@ class ContactPageWidget extends SiteOrigin_Widget
                         'value_method' => 'val'
                     ),
                     'fields' => array(
+                        'type_block' => array(
+                            'type' => 'radio',
+                            'label' => __( 'Тип блоку', 'mk-metal-trade' ),
+                            'default' => 'other',
+                            'options' => array(
+                                'phone' => __( 'Номер телефону', 'mk-metal-trade' ),
+                                'email' => __( 'Поштова адреса', 'mk-metal-trade' ),
+                                'address' => __( 'Фізична адреса', 'mk-metal-trade' ),
+                                'other' => __( 'Інше', 'mk-metal-trade' )
+                            )
+                        ),
                         'title' => array(
                             'type' => 'text',
                             'label' => __('Заголовок блоку.', 'mk-metal-trade'),
