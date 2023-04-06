@@ -4,6 +4,10 @@
   margin-bottom: 20px;
   background: linear-gradient(270deg,#f8f9fa 65%,transparent 0);
 
+  @media screen and (max-width: 991px) {
+    background: #f8f9fa;
+  }
+
   &-container {
     @media screen and (min-width: 1199px) {
       width: 1200px;
@@ -12,13 +16,7 @@
       width: 960px;
     }
     @media screen and (max-width: 991px) {
-      width: 720px;
-    }
-    @media screen and (max-width: 767px) {
-      width: 540px;
-    }
-    @media screen and (max-width: 566px) {
-      width: 80vw;
+      width: 100%;
     }
 
     margin: 0;
@@ -40,6 +38,17 @@
     height: 400px;
     background-color: #767676;
     width: 100%;
+
+    @media screen and (max-width: 991px) {
+      height: 250px!important;
+      min-height: 250px!important;
+    }
+
+    & > div {
+      @media screen and (max-width: 991px) {
+        height: 250px!important;
+      }
+    }
   }
 
   &-info {
