@@ -125,3 +125,13 @@ function mkmetal_add_meta_tags()
 }
 
 add_action('wp_head', 'mkmetal_add_meta_tags');
+
+
+function close_standard_search( $query, $error = true) {
+    if (is_search() && !is_admin()) {
+        $query->is_search       = false;
+        $query->query_vars['s'] = false;
+    }
+}
+
+add_action('parse_query', 'close_standard_search');
