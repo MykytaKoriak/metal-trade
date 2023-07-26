@@ -1,6 +1,7 @@
 <div class="contact-page">
     <div class="contact-page-container">
         <div class="contact-page-map">
+            {{--<div id="contact_page_map"></div>--}}
             {!! do_shortcode($map) !!}
         </div>
         <div class="contact-page-info">

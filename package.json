@@ -22,5 +22,14 @@
     "@roots/bud": "6.8.0",
     "@roots/bud-tailwindcss": "6.8.0",
     "@roots/sage": "6.8.0"
+  },
+  "dependencies": {
+    "@google/markerclustererplus": "^5.1.3",
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "@googlemaps/markermanager": "^1.0.29",
+    "@react-google-maps/api": "^2.19.2",
+    "google-maps": "^4.3.3",
+    "google-maps-infobox": "^2.0.0",
+    "google-maps-react": "^2.0.6"
   }
 }
