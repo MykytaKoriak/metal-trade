@@ -37,10 +37,27 @@ class ContactPageWidget extends SiteOrigin_Widget
 
             // The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
-                'map' => array(
+                'map_api_key' => array(
                     'type' => 'text',
-                    'label' => __('Shortcode для мапи.', 'mk-metal-trade'),
-                    'default' => '[]',
+                    'label' => __('Google Map API Key', 'mk-metal-trade'),
+                ),
+                'title_marker' => array(
+                    'type' => 'text',
+                    'label' => __('Заголовок маркеру', 'mk-metal-trade'),
+                ),
+                'content_marker' => array(
+                    'type' => 'tinymce',
+                    'label' => __('Введіть тест який буде відображатись над маркером', 'mk-metal-trade'),
+                    'default' => 'МК Метал Трейд',
+                    'rows' => 10,
+                    'default_editor' => 'html',
+                    'button_filters' => array(
+                        'mce_buttons' => array($this, 'filter_mce_buttons'),
+                        'mce_buttons_2' => array($this, 'filter_mce_buttons_2'),
+                        'mce_buttons_3' => array($this, 'filter_mce_buttons_3'),
+                        'mce_buttons_4' => array($this, 'filter_mce_buttons_5'),
+                        'quicktags_settings' => array($this, 'filter_quicktags_settings'),
+                    ),
                 ),
                 'title' => array(
                     'type' => 'text',
@@ -59,13 +76,13 @@ class ContactPageWidget extends SiteOrigin_Widget
                     'fields' => array(
                         'type_block' => array(
                             'type' => 'radio',
-                            'label' => __( 'Тип блоку', 'mk-metal-trade' ),
+                            'label' => __('Тип блоку', 'mk-metal-trade'),
                             'default' => 'other',
                             'options' => array(
-                                'phone' => __( 'Номер телефону', 'mk-metal-trade' ),
-                                'email' => __( 'Поштова адреса', 'mk-metal-trade' ),
-                                'address' => __( 'Фізична адреса', 'mk-metal-trade' ),
-                                'other' => __( 'Інше', 'mk-metal-trade' )
+                                'phone' => __('Номер телефону', 'mk-metal-trade'),
+                                'email' => __('Поштова адреса', 'mk-metal-trade'),
+                                'address' => __('Фізична адреса', 'mk-metal-trade'),
+                                'other' => __('Інше', 'mk-metal-trade')
                             )
                         ),
                         'title' => array(
@@ -142,8 +159,17 @@ class ContactPageWidget extends SiteOrigin_Widget
         if (isset($instance['is_preview'])) {
             bundle('app')->enqueue();
         }
+        $GMAP = [
+            'key' => $instance['map_api_key'],
+            'title' => $instance['title_marker'],
+            'content' => $instance['content_marker'],
+        ];
         $data = [
-            'map' => $instance['map'],
+            'map' => [
+                'key' => $instance['map_api_key'],
+                'title' => $instance['title_marker'],
+                'content' => $instance['content_marker'],
+            ],
             'title' => $instance['title'],
             'contact_blocks' => $instance['contact_blocks'],
             'join_title' => $instance['join_title'],
@@ -153,19 +179,28 @@ class ContactPageWidget extends SiteOrigin_Widget
             'social_list' => []
         ];
         foreach ($instance['social_list'] as $item) {
-            if(strpos($item['social'], "post: ") !== false){
+            if (strpos($item['social'], "post: ") !== false) {
                 $post_id = str_replace("post: ", "", $item['social']);
                 $data['social_list'][] = [
                     'icon' => wp_get_attachment_url($item['icon']),
                     'url' => get_permalink(intval($post_id))
                 ];
-            } else{
+            } else {
                 $data['social_list'][] = [
                     'icon' => wp_get_attachment_url($item['icon']),
                     'url' => $item['social']
                 ];
             }
         }
+
+        ?>
+        <script>
+            window.GOOGLE_MAPS_JS_API_KEY = '<?php echo $GMAP['key']?>';
+            window.google_maps_marker = {
+                title: '<?php echo $GMAP['title']?>',
+                content: '<?php echo str_replace(array("\n", "\r"), '', $GMAP['content'])?>'};
+        </script>
+        <?php
 
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/contact-page.blade.php", $data);
     }

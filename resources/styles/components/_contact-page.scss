@@ -45,6 +45,8 @@
     }
 
     & > div {
+      height: 100%;
+
       @media screen and (max-width: 991px) {
         height: 250px !important;
       }
