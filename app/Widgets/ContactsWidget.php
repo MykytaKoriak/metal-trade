@@ -127,10 +127,32 @@ class ContactsWidget extends SiteOrigin_Widget
                         )
                     )
                 ),
-                'map' => array(
+                'map_id' => array(
                     'type' => 'text',
-                    'label' => __('Shortcode для мапи.', 'mk-metal-trade'),
-                    'default' => '[]',
+                    'default' => ' ',
+                    'label' => __('ID карти', 'mk-metal-trade'),
+                ),
+                'map_api_key' => array(
+                    'type' => 'text',
+                    'label' => __('Google Map API Key', 'mk-metal-trade'),
+                ),
+                'title_marker' => array(
+                    'type' => 'text',
+                    'label' => __('Заголовок маркеру', 'mk-metal-trade'),
+                ),
+                'content_marker' => array(
+                    'type' => 'tinymce',
+                    'label' => __('Введіть тест який буде відображатись над маркером', 'mk-metal-trade'),
+                    'default' => 'МК Метал Трейд',
+                    'rows' => 10,
+                    'default_editor' => 'html',
+                    'button_filters' => array(
+                        'mce_buttons' => array($this, 'filter_mce_buttons'),
+                        'mce_buttons_2' => array($this, 'filter_mce_buttons_2'),
+                        'mce_buttons_3' => array($this, 'filter_mce_buttons_3'),
+                        'mce_buttons_4' => array($this, 'filter_mce_buttons_5'),
+                        'quicktags_settings' => array($this, 'filter_quicktags_settings'),
+                    ),
                 ),
             ),
 
@@ -144,6 +166,12 @@ class ContactsWidget extends SiteOrigin_Widget
         if (isset($instance['is_preview'])) {
             bundle('app')->enqueue();
         }
+        $GMAP = [
+            'key' => $instance['map_api_key'],
+            'title' => $instance['title_marker'],
+            'content' => $instance['content_marker'],
+        ];
+
         $data = [
             'title' => $instance['title'],
             'form' => $instance['form'],
@@ -152,7 +180,7 @@ class ContactsWidget extends SiteOrigin_Widget
             'phone_list' => $instance['phone_list'],
             'mobile_form_title' => $instance['mobile_form_title'],
             'social_list' => [],
-            'map' => $instance['map'],
+            'map_id' => $instance['map_id'],
         ];
         foreach ($instance['social_list'] as $item) {
             if(strpos($item['social'], "post: ") !== false){
@@ -168,6 +196,15 @@ class ContactsWidget extends SiteOrigin_Widget
                 ];
             }
         }
+        ?>
+        <script>
+            window.GOOGLE_MAPS_JS_API_KEY = '<?php echo $GMAP['key']?>';
+            window.google_maps_marker = {
+                title: '<?php echo $GMAP['title']?>',
+                content: '<?php echo str_replace(array("\n", "\r"), '', $GMAP['content'])?>'};
+        </script>
+        <?php
+
         echo Roots\view(dirname(__FILE__) . "/../../resources/views/widgets/contacts.blade.php", $data);
     }
 }

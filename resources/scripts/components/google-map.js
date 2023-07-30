@@ -1,7 +1,6 @@
 import {Loader} from '@googlemaps/js-api-loader';
+import $ from "jquery";
 
-// TODO: need to add backend for this code in homepage
-// TODO: need to add this code to widget in homepage
 function create_map(element_id) {
     const MAP_API_KEY = window.GOOGLE_MAPS_JS_API_KEY ? window.GOOGLE_MAPS_JS_API_KEY : " ";
     const loader = new Loader({
@@ -37,4 +36,9 @@ function create_map(element_id) {
 
 window.onload = function () {
     create_map("contact_page_map");
+    let MapsIDs = [];
+    $('.class-map-object').each(function(){ MapsIDs.push(this.id); });
+    $(MapsIDs).each(function () {
+        create_map(this);
+    })
 };

@@ -134,10 +134,14 @@
 
   &-map {
     width: 100%;
-    height: fit-content;
+    height: 400px;
     background-color: rgba(0, 0, 0, 0.4);
     @media screen and (max-width: 566px) {
       display: none;
+    }
+
+    >div{
+      height: 100%;
     }
   }
 }
