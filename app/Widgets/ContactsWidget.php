@@ -181,6 +181,8 @@ class ContactsWidget extends SiteOrigin_Widget
             'mobile_form_title' => $instance['mobile_form_title'],
             'social_list' => [],
             'map_id' => $instance['map_id'],
+            'map_title' => $GMAP['title'],
+            'map_content' => $GMAP['content']
         ];
         foreach ($instance['social_list'] as $item) {
             if(strpos($item['social'], "post: ") !== false){
