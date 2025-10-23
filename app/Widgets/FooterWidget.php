@@ -220,11 +220,13 @@ class FooterWidget extends SiteOrigin_Widget
                 'link' => $item['link']
             ];
         }
-        foreach ($global_data['social_networks'] as $item) {
-            $data['social_list'][] = [
-                'text' => $item['social_title'],
-                'social' => $item['social_url']
-            ];
+        if ($global_data['social_networks']) {
+            foreach ($global_data['social_networks'] as $item) {
+                $data['social_list'][] = [
+                    'text' => $item['social_title'],
+                    'social' => $item['social_url']
+                ];
+            }
         }
         return $data;
     }

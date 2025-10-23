@@ -186,7 +186,7 @@ class HeaderMenuWidget extends SiteOrigin_Widget
     }
 
 
-    private function load_default_data(){
+     function load_default_data(){
         $global_data = get_field("header_general_data", "option");
 
         $data = [
@@ -197,18 +197,22 @@ class HeaderMenuWidget extends SiteOrigin_Widget
             'dark_logo' => $global_data['dark_logo'],
         ];
 
-        foreach ($global_data['menu_links'] as $item) {
-            $data['sitemap'][] = [
-                'title' =>$item['link_name'],
-                'link' => $item['link']
-            ];
+        if ($global_data['menu_links']) {
+            foreach ($global_data['menu_links'] as $item) {
+                $data['sitemap'][] = [
+                    'title' => $item['link_name'],
+                    'link' => $item['link']
+                ];
+            }
         }
 
-        foreach ($global_data['social_network'] as $item) {
-            $data['social_list'][] = [
-                'icon' => $item['social_icon'],
-                'url' => $item['social_url']
-            ];
+        if ($global_data['social_network']) {
+            foreach ($global_data['social_network'] as $item) {
+                $data['social_list'][] = [
+                    'icon' => $item['social_icon'],
+                    'url' => $item['social_url']
+                ];
+            }
         }
         return $data;
     }

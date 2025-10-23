@@ -37,9 +37,11 @@
           {!! $social_title !!}
         </div>
         <div class="footer-contacts-social-list">
+          @if($social_list)
           @foreach($social_list as $item)
             <a href="{!! $item['social'] !!}" class="footer-contacts-social-list-item">{!! $item['text'] !!}</a>
           @endforeach
+          @endif
         </div>
       </div>
     </div>
