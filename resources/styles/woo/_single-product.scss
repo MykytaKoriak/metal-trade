@@ -1,0 +1,436 @@
+/*
+  Scoped styles for the woo-product block
+  All selectors are prefixed with .woo-product to avoid leaking styles
+*/
+
+.woo-product {
+  --wp-bg: #f7f8fa;
+  --wp-surface: #ffffff;
+  --wp-border: #e7e9ee;
+  --wp-muted: #6b7280;
+  --wp-text: #0f172a;
+  --wp-primary: #2f66d0;
+  --wp-primary-600: #2a59b6;
+  --wp-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+  --wp-radius: 14px;
+  --wp-chip: #eef1f6;
+  width: 90%;
+  margin: 80px auto;
+}
+
+.woo-product * {
+  box-sizing: border-box;
+}
+
+.woo-product .wp-card {
+  background: var(--wp-surface);
+  border-radius: 18px;
+  box-shadow: var(--wp-shadow);
+  border: 1px solid var(--wp-border);
+  overflow: hidden;
+}
+
+.woo-product .wp-card__header {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--wp-border);
+  background: linear-gradient(#fbfcfe, #f7f8fb);
+}
+
+.woo-product .wp-brand {
+  font-weight: 700;
+  color: #6c7a86;
+  letter-spacing: .02em;
+}
+
+.woo-product .wp-card__body {
+  padding: 24px;
+}
+
+.woo-product .wp-grid {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Gallery */
+.woo-product .wp-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.woo-product .wp-thumbs {
+  display: flex;
+  gap: 12px;
+  order: 2;
+  flex-direction: row;
+  overflow: auto;
+  padding: 5px;
+
+}
+
+.woo-product .wp-thumb {
+  border: 1px solid var(--wp-border);
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+  transition: .2s ease;
+}
+
+.woo-product .wp-thumb:hover {
+  transform: translateY(-1px);
+}
+
+.woo-product .wp-thumb.is-active {
+  outline: 2px solid var(--wp-primary);
+}
+
+.woo-product .wp-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.woo-product .wp-image {
+  background: #fbfbfd;
+  border: 1px solid var(--wp-border);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .05) inset;
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.woo-product .wp-image__item {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.woo-product .wp-image__item.is-active {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.woo-product .wp-lists {
+  margin-top: 20px;
+}
+
+.woo-product .wp-section + .wp-section {
+  margin-top: 18px;
+}
+
+.woo-product .wp-section__title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--wp-text);
+}
+
+.woo-product .wp-ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #1f2937;
+}
+
+.woo-product .wp-ul li {
+  margin: 6px 0;
+}
+
+/* Info */
+.woo-product .wp-info {
+  padding-top: 6px;
+}
+
+.woo-product .wp-title {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.25;
+  color: var(--wp-text);
+}
+
+.woo-product .wp-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--wp-muted);
+  margin-bottom: 14px;
+}
+
+.woo-product .wp-stars {
+  display: inline-flex;
+}
+
+.woo-product .wp-stars .star {
+  --s: 18px;
+  width: var(--s);
+  height: var(--s);
+  display: inline-block;
+  margin-right: 4px;
+  background: conic-gradient(#f5c54b 0 72%, #d1d5db 0);
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>') center/contain no-repeat;
+}
+
+.woo-product .wp-stars .star.star--half {
+  background: linear-gradient(90deg, #f5c54b 50%, #d1d5db 50%);
+}
+
+.woo-product .wp-reviews {
+  color: inherit;
+  text-decoration: none;
+}
+
+.woo-product .wp-price {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 10px 0 18px;
+  color: var(--wp-text);
+}
+
+.woo-product .wp-price .uah {
+  font-weight: 700;
+}
+
+.woo-product .wp-variant__label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.woo-product .wp-variant__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.woo-product .wp-chip {
+  border: 1px solid var(--wp-border);
+  background: var(--wp-chip);
+  color: #111827;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s ease;
+  font-weight: 600;
+}
+
+.woo-product .wp-chip strong {
+  font-weight: 800;
+}
+
+.woo-product .wp-chip:hover {
+  background: #e8eef9;
+}
+
+.woo-product .wp-chip.is-selected {
+  background: #fff;
+  border-color: var(--wp-primary);
+  box-shadow: 0 0 0 3px rgba(47, 102, 208, .12);
+}
+
+.woo-product .wp-actions {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0 12px;
+}
+
+.woo-product .wp-btn {
+  appearance: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--wp-border);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  color: #1f2a44;
+}
+
+.woo-product .wp-btn--primary {
+  background: var(--wp-primary);
+  color: #fff;
+  border-color: var(--wp-primary);
+}
+
+.woo-product .wp-btn--primary:hover {
+  background: var(--wp-primary-600);
+}
+
+.woo-product .wp-badges {
+  display: flex;
+  gap: 18px;
+  color: #1f2937;
+  margin: 10px 0 16px;
+}
+
+.woo-product .wp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--wp-border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.woo-product .wp-icon {
+  font-size: 18px;
+}
+
+.woo-product .wp-tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--wp-border);
+}
+
+.woo-product .wp-tab {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 10px 12px;
+  cursor: pointer;
+  color: #374151;
+  border-radius: 10px 10px 0 0;
+  font-weight: 600;
+}
+
+.woo-product .wp-tab.is-active {
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid var(--wp-border);
+  border-bottom-color: #fff;
+}
+
+.woo-product .wp-tabpanes {
+  border: 1px solid var(--wp-border);
+  border-top: 0;
+  border-radius: 0 10px 10px 10px;
+  background: #fff;
+}
+
+.woo-product .wp-pane {
+  display: none;
+  padding: 14px;
+  color: #111827;
+}
+
+.woo-product .wp-pane.is-active {
+  display: block;
+}
+
+.woo-product .wp-specs .row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-bottom: 1px solid var(--wp-border);
+}
+
+.woo-product .wp-specs .row > div {
+  padding: 10px 12px;
+}
+
+.woo-product .wp-specs .row .key {
+  background: #f9fafb;
+  color: #4b5563;
+}
+
+/* Woo add-to-cart form adjustments inside the block */
+.woo-product .wp-woo-form form {
+  display: block;
+}
+
+.woo-product table.variations {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin: 0 0 8px;
+  width: auto;
+}
+
+.woo-product table.variations td.label {
+  padding: 0 10px 0 0;
+  white-space: nowrap;
+  color: #374151;
+  font-weight: 600;
+}
+
+.woo-product table.variations td.value {
+  padding: 0;
+}
+
+.woo-product select.is-hidden {
+  display: none;
+}
+
+.woo-product .quantity .qty {
+  width: 88px;
+  height: 42px;
+  border: 1px solid var(--wp-border);
+  border-radius: 10px;
+  padding: 6px 10px;
+  background: #fff;
+}
+
+.woo-product .single_add_to_cart_button.wp-btn {
+  margin-left: 8px;
+}
+
+.woo-product .woocommerce-variation {
+  margin: 8px 0;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .woo-product .wp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet: compressed spacing */
+@media (max-width: 860px) {
+  .woo-product .wp-image {
+    height: 360px;
+  }
+  .woo-product .wp-card__body {
+    padding: 18px;
+  }
+  .woo-product .wp-title {
+    font-size: 28px;
+  }
+  .woo-product .wp-price {
+    font-size: 30px;
+  }
+  .woo-product .wp-specs .row {
+    grid-template-columns: 160px 1fr;
+  }
+}
+
+/* Phone: single column, horizontal thumbs */
+@media (max-width: 600px) {
+  .woo-product .wp-grid {
+    gap: 20px;
+  }
+  .woo-product .wp-thumb {
+    min-width: 72px;
+  }
+  .woo-product .wp-actions {
+    flex-direction: column;
+  }
+  .woo-product .wp-specs .row {
+    grid-template-columns: 1fr;
+  }
+  .woo-product .wp-tab {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}

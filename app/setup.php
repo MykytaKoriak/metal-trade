@@ -167,3 +167,5 @@ function register_acf_fields_types()
 }
 
 register_acf_fields_types();
+
+require __DIR__ . '/woocommerce.php';
