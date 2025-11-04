@@ -1,0 +1,215 @@
+/* Woo MK Catalog styles (scoped) */
+.woo-mk-catalog {
+  --woo-mk-catalog-bg: #ffffff;
+  --woo-mk-catalog-muted: #6b7280;
+  --woo-mk-catalog-text: #0f172a;
+  --woo-mk-catalog-border: #e5e7eb;
+  --woo-mk-catalog-accent: #2563eb;
+  --woo-mk-catalog-accent-600: #1e40af;
+  --woo-mk-catalog-card: #f9fafb;
+  --woo-mk-catalog-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px 48px;
+  color: var(--woo-mk-catalog-text);
+}
+
+.woo-mk-catalog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px
+}
+
+.woo-mk-catalog__title {
+  font-size: 32px;
+  margin: 0
+}
+
+.woo-mk-catalog__sort {
+  display: flex;
+  align-items: center;
+  gap: 8px
+}
+
+.woo-mk-catalog__sort-select {
+  padding: 8px 12px;
+  border: 1px solid var(--woo-mk-catalog-border);
+  border-radius: 8px;
+  background: var(--woo-mk-catalog-bg)
+}
+
+.woo-mk-catalog__container {
+  display: grid;
+  grid-template-columns:280px 1fr;
+  gap: 24px
+}
+
+.woo-mk-catalog__filters {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  max-width: 300px
+}
+
+.woo-mk-catalog__filters-form {
+  display: block
+}
+
+.woo-mk-catalog__filter-card {
+  background: var(--woo-mk-catalog-bg);
+  border: 1px solid var(--woo-mk-catalog-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px
+}
+
+.woo-mk-catalog__filter-title {
+  font-weight: 600;
+  margin-bottom: 10px
+}
+
+.woo-mk-catalog__filter-list {
+  display: grid;
+  gap: 8px
+}
+
+.woo-mk-catalog__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none
+}
+
+.woo-mk-catalog__checkbox input {
+  width: 16px;
+  height: 16px
+}
+
+.woo-mk-catalog__price-row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--woo-mk-catalog-muted);
+  margin-bottom: 6px
+}
+
+.woo-mk-catalog__range-rows {
+  display: grid;
+  gap: 8px
+}
+
+.woo-mk-catalog__range {
+  width: 100%
+}
+
+.woo-mk-catalog__content {
+}
+
+.woo-mk-catalog__grid {
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap: 16px
+}
+
+.woo-mk-catalog__card {
+  background: #fff;
+  border: 1px solid var(--woo-mk-catalog-border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease
+}
+
+.woo-mk-catalog__card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: var(--woo-mk-catalog-shadow)
+}
+
+.woo-mk-catalog__card-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--woo-mk-catalog-card)
+}
+
+.woo-mk-catalog__card-img--ph {
+  background: linear-gradient(90deg, #f3f4f6, #e5e7eb)
+}
+
+.woo-mk-catalog__card-body {
+  padding: 12px 14px 16px
+}
+
+.woo-mk-catalog__card-title {
+  margin: 0 0 6px;
+  font-size: 18px
+}
+
+.woo-mk-catalog__card-price {
+  font-weight: 700
+}
+
+.woo-mk-catalog__empty {
+  padding: 16px;
+  border: 1px dashed var(--woo-mk-catalog-border);
+  border-radius: 12px;
+  color: var(--woo-mk-catalog-muted)
+}
+
+.woo-mk-catalog__pagination {
+  margin-top: 16px
+}
+
+.woo-mk-catalog__pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px
+}
+
+.woo-mk-catalog__page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--woo-mk-catalog-border);
+  border-radius: 10px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none
+}
+
+.woo-mk-catalog__page.is-active {
+  border-color: var(--woo-mk-catalog-accent);
+  color: var(--woo-mk-catalog-accent);
+  font-weight: 600
+}
+
+/* No modal in simplified version */
+
+/* Responsive */
+@media (max-width: 1023.98px) {
+  .woo-mk-catalog__container {
+    grid-template-columns:1fr
+  }
+  .woo-mk-catalog__filters {
+    position: static;
+    max-width: unset;
+  }
+  .woo-mk-catalog__grid {
+    grid-template-columns:repeat(2, 1fr)
+  }
+}
+
+@media (max-width: 767.98px) {
+  .woo-mk-catalog__header {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .woo-mk-catalog__grid {
+    grid-template-columns:1fr
+  }
+}
