@@ -21,13 +21,10 @@
   // Description capture
   $desc = apply_filters('the_content', $product->get_description());
 
-  // Specs/attributes capture
-  ob_start();
-  wc_display_product_attributes($product);
-  $specs_html = ob_get_clean();
+  // Specs/at = ob_get_clean();
 
   // Optional delivery info via ACF field or term meta (fallback text)
-  $delivery_text = function_exists('get_field') ? (get_field('delivery_info', $product->get_id()) ?: '') : '';
+  $delivery_text = apply_filters('woocommerce_short_description', $product->get_short_description());
   if (!$delivery_text) {
     $delivery_text = __('Доставляємо по Україні: Нова Пошта, кур\'єр, самовивіз.', 'sage');
   }
@@ -122,7 +119,7 @@
               {!! $specs_html ?: '<p>'.__('Немає додаткових характеристик.', 'sage').'</p>' !!}
             </div>
             <div id="tab-delivery" class="wp-pane" role="tabpanel">
-              <p>{!! nl2br(e($delivery_text)) !!}</p>
+              <p>{!! $delivery_text !!}</p>
             </div>
           </div>
 
