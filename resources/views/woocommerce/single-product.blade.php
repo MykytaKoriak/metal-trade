@@ -23,7 +23,8 @@
 
   // Specs/at = ob_get_clean();
 
-  // Optional delivery info via ACF field or term meta (fallback text)
+    $attributes = $product->get_attributes();
+// Optional delivery info via ACF field or term meta (fallback text)
   $delivery_text = apply_filters('woocommerce_short_description', $product->get_short_description());
   if (!$delivery_text) {
     $delivery_text = __('Доставляємо по Україні: Нова Пошта, кур\'єр, самовивіз.', 'sage');
@@ -56,12 +57,13 @@
               @php
                 $thumb = wp_get_attachment_image($att_id, 'woocommerce_gallery_thumbnail', false, ['alt' => get_post_meta($att_id, '_wp_attachment_image_alt', true)]);
               @endphp
-              <button class="wp-thumb {{ $idx === 0 ? 'is-active' : '' }}" role="listitem" data-image="#img-{{ $idx }}">{!! $thumb !!}</button>
+              <button class="wp-thumb {{ $idx === 0 ? 'is-active' : '' }}" role="listitem"
+                      data-image="#img-{{ $idx }}">{!! $thumb !!}</button>
             @endforeach
           </div>
 
           <div class="wp-image">
-{{--            TODO: ПЕРЕДЕЛАТЬ НА DIV с бекграундом и убрать абсолюты --}}
+            {{--            TODO: ПЕРЕДЕЛАТЬ НА DIV с бекграундом и убрать абсолюты --}}
             @foreach($attachment_ids as $idx => $att_id)
               {!! wp_get_attachment_image($att_id, array( 400, 400 ), false, [
                     'id' => 'img-'.$idx,
@@ -76,10 +78,10 @@
         <div class="wp-info">
           <h1 class="wp-title">{!! $product->get_name() !!}</h1>
 
-{{--          <div class="wp-rating" aria-label="{{ sprintf(__('Рейтинг: %s з 5', 'sage'), $average) }}">--}}
-{{--            <span class="wp-stars" aria-hidden="true">{!! $rating_html !!}</span>--}}
-{{--            <a href="#reviews" class="wp-reviews">{{ $review_count }} {{ _n('відгук', 'відгуків', $review_count, 'sage') }}</a>--}}
-{{--          </div>--}}
+          {{--          <div class="wp-rating" aria-label="{{ sprintf(__('Рейтинг: %s з 5', 'sage'), $average) }}">--}}
+          {{--            <span class="wp-stars" aria-hidden="true">{!! $rating_html !!}</span>--}}
+          {{--            <a href="#reviews" class="wp-reviews">{{ $review_count }} {{ _n('відгук', 'відгуків', $review_count, 'sage') }}</a>--}}
+          {{--          </div>--}}
 
           <div class="wp-price">{!! wp_kses_post($price_html) !!}</div>
 
@@ -116,7 +118,11 @@
               {!! $desc !!}
             </div>
             <div id="tab-specs" class="wp-pane" role="tabpanel">
-              {!! $specs_html ?: '<p>'.__('Немає додаткових характеристик.', 'sage').'</p>' !!}
+              @foreach($attributes as $attr)
+                @if(method_exists($attr,'is_visible') ? $attr->is_visible() : true)
+                  <p>{{ wc_attribute_label($attr->get_name()) }} : {!! wc_implode_text_attributes($attr->get_options()) !!}</p>
+                @endif
+              @endforeach
             </div>
             <div id="tab-delivery" class="wp-pane" role="tabpanel">
               <p>{!! $delivery_text !!}</p>
