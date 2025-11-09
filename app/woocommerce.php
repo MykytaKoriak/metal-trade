@@ -65,4 +65,53 @@ if (defined('WC_ABSPATH')) {
         // return empty file, output already rendered by 'woocommerce_before_template_part' hook
         return $theme_template ? get_stylesheet_directory() . '/index.php' : $template;
     }, 100, 3);
+
+    if( function_exists('acf_add_local_field_group') ):
+
+        acf_add_local_field_group(array(
+            'key' => 'group_690f397e96cca',
+            'title' => 'Product Form',
+            'fields' => array(
+                array(
+                    'key' => 'field_690f397f7dd0e',
+                    'label' => 'Форма замовлення',
+                    'name' => 'contact_form',
+                    'aria-label' => '',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'maxlength' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'product',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => '',
+            'show_in_rest' => 0,
+        ));
+
+    endif;
 }
