@@ -98,7 +98,7 @@
               {{-- WooCommerce add to cart (simple/variable/grouped are handled automatically) --}}
               @php woocommerce_template_single_add_to_cart(); @endphp
             </div>
-            <button type="button" class="wp-btn" data-action="quote">{{ __('Замовити розрахунок', 'sage') }}</button>
+            <button type="button" id="order_calculation_form" class="wp-btn" data-action="quote">{{ __('Замовити розрахунок', 'sage') }}</button>
           </div>
 
           <div class="wp-badges">
@@ -109,9 +109,12 @@
           </div>
 
           <div class="wp-tabs" role="tablist">
-            <button class="wp-tab is-active" role="tab" aria-controls="tab-desc" aria-selected="true">{{ __('Опис', 'sage') }}</button>
-            <button class="wp-tab" role="tab" aria-controls="tab-specs" aria-selected="false">{{ __('Характеристики', 'sage') }}</button>
-            <button class="wp-tab" role="tab" aria-controls="tab-delivery" aria-selected="false">{{ __('Доставка', 'sage') }}</button>
+            <button class="wp-tab is-active" role="tab" aria-controls="tab-desc"
+                    aria-selected="true">{{ __('Опис', 'sage') }}</button>
+            <button class="wp-tab" role="tab" aria-controls="tab-specs"
+                    aria-selected="false">{{ __('Характеристики', 'sage') }}</button>
+            <button class="wp-tab" role="tab" aria-controls="tab-delivery"
+                    aria-selected="false">{{ __('Доставка', 'sage') }}</button>
           </div>
           <div class="wp-tabpanes">
             <div id="tab-desc" class="wp-pane is-active" role="tabpanel">
@@ -120,7 +123,8 @@
             <div id="tab-specs" class="wp-pane" role="tabpanel">
               @foreach($attributes as $attr)
                 @if(method_exists($attr,'is_visible') ? $attr->is_visible() : true)
-                  <p>{{ wc_attribute_label($attr->get_name()) }} : {!! wc_implode_text_attributes($attr->get_options()) !!}</p>
+                  <p>{{ wc_attribute_label($attr->get_name()) }}
+                    : {!! wc_implode_text_attributes($attr->get_options()) !!}</p>
                 @endif
               @endforeach
             </div>
@@ -133,6 +137,20 @@
       </div>
     </div>
   </div>
+
+  <div class="wc-popup-form">
+    {{--    <pre>--}}
+    @php
+      $form = get_field("contact_form", get_the_ID());
+  //    var_dump($form);
+        $form_html = do_shortcode($form);
+        echo $form_html;
+  //      var_dump($form_html)
+
+    @endphp
+    {{--    </pre>--}}
+  </div>
+
 </div>
 
 @php

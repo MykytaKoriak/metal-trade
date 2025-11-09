@@ -35,11 +35,11 @@
     });
 
     // Action buttons demo handlers (replace with integration)
-    $root.on('click', '[data-action=buy]', function(){
+    $root.on('click', '[data-action=buy]', function () {
       var size = $root.find('.wp-chip.is-selected').data('value');
       console.log('[woo-product] Купити, розмір:', size);
     });
-    $root.on('click', '[data-action=quote]', function(){
+    $root.on('click', '[data-action=quote]', function () {
       var size = $root.find('.wp-chip.is-selected').data('value');
       console.log('[woo-product] Запит розрахунку, розмір:', size);
     });
@@ -52,12 +52,12 @@
     // Build chips for each attribute select (if present)
     var $grid = $root.find('.wp-variant__grid[data-build-from-selects=true]');
     if ($form.length && $grid.length) {
-      $form.find('select[name^="attribute_"]').each(function(){
+      $form.find('select[name^="attribute_"]').each(function () {
         var $select = $(this);
         var current = $select.val();
         $select.addClass('is-hidden');
 
-        $select.find('option').each(function(){
+        $select.find('option').each(function () {
           var val = $(this).attr('value');
           var label = $(this).text();
           if (!val) return; // skip placeholder
@@ -71,7 +71,7 @@
         });
 
         // clicking chip selects the option
-        $grid.on('click', '.wp-chip', function(){
+        $grid.on('click', '.wp-chip', function () {
           var val = $(this).data('value');
           // set and trigger change to refresh variation availability
           $select.val(val).trigger('change');
@@ -79,9 +79,9 @@
         });
 
         // keep chip state in sync when select value changes programmatically
-        $select.on('change', function(){
+        $select.on('change', function () {
           var v = $select.val();
-          $grid.find('.wp-chip').each(function(){
+          $grid.find('.wp-chip').each(function () {
             $(this).toggleClass('is-selected', $(this).data('value') === v);
           });
         });
@@ -89,3 +89,104 @@
     }
   });
 })(jQuery);
+
+jQuery(function ($) {
+
+  var $popup = $('.wc-popup-form');
+
+  if (!$popup.length) return;
+
+  // чи була успішна відправка форми в цьому попапі
+  var successSent = false;
+
+  // На старті переконуємось, що попап закритий
+  $popup.removeClass('is-open');
+
+  // Додаємо кнопку-хрестик, якщо її немає в HTML
+  if (!$popup.find('.wc-popup-close').length) {
+    $popup.find('.wpcf7').prepend(
+      '<button type="button" class="wc-popup-close" aria-label="Закрити">&times;</button>'
+    );
+  }
+
+  // Відкрити попап по кліку на кнопку
+  $('#order_calculation_form').on('click', function (e) {
+    e.preventDefault();
+    $popup.addClass('is-open');
+  });
+
+  // Єдина функція закриття попапа
+  function closePopup() {
+    $popup.removeClass('is-open');
+
+    // Якщо не було успішної відправки — просто чистимо форму
+    var form = $popup.find('form')[0];
+    if (form && !successSent) {
+      form.reset();
+    }
+
+    // Прибираємо повідомлення про успіх (якщо було)
+    $popup.find('.wc-popup-success').remove();
+
+    // Повертаємо форму, якщо її ховали
+    $popup.find('.wpcf7-form').show();
+
+    // Якщо форма була УСПІШНО відправлена — перезавантажуємо сторінку
+    if (successSent) {
+      successSent = false; // скидаємо прапорець
+      window.location.reload();
+    }
+  }
+
+  // Закриття по хрестику
+  $popup.on('click', '.wc-popup-close', function () {
+    closePopup();
+  });
+
+  // Закриття по кліку на фон (тільки якщо клік саме по overlay, а не по формі)
+  $popup.on('click', function (e) {
+    if (e.target === this) {
+      closePopup();
+    }
+  });
+
+  // Закриття по Esc
+  $(document).on('keyup', function (e) {
+    if (e.key === 'Escape' && $popup.hasClass('is-open')) {
+      closePopup();
+    }
+  });
+
+  /**
+   * Contact Form 7 – успішна відправка
+   * Слухаємо глобальну подію wpcf7mailsent,
+   * але реагуємо тільки на форму з ID 533
+   */
+  document.addEventListener('wpcf7mailsent', function (event) {
+    if (event.detail && event.detail.contactFormId == 533) {
+
+      successSent = true;
+
+      var $form = $popup.find('.wpcf7-form');
+
+      // Ховаємо форму всередині попапа
+      $form.fadeOut(200, function () {
+        // Додаємо повідомлення успіху
+        $popup.find('.wpcf7').append(
+          '<div class="wc-popup-success">' +
+          '<h3>Дякуємо!</h3>' +
+          '<p>Ваша заявка успішно відправлена.<br>Очікуйте дзвінка від менеджера найближчим часом.</p>' +
+          '</div>'
+        );
+
+        $popup.find('.wc-popup-success').hide().fadeIn(300);
+      });
+
+      // ⛔ Автоматично попап НЕ закриваємо.
+      // Користувач читає повідомлення і сам натискає хрестик
+      // або клікає по фону / натискає Esc → тоді спрацьовує closePopup(),
+      // який, бачачи successSent === true, зробить reload сторінки.
+    }
+  }, false);
+
+});

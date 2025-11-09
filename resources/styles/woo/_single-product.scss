@@ -434,3 +434,138 @@
     font-size: 14px;
   }
 }
+
+/* ===== POPUP OVERLAY ===== */
+
+.wc-popup-form {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6); /* затемнення фону */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Коли відкритий */
+.wc-popup-form.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== ВНУТРІШНІЙ БЛОК ФОРМИ ===== */
+
+.wc-popup-form .wpcf7 {
+  background: #ffffff;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 24px 24px 28px;
+  position: relative;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Заголовок форми (якщо захочеш додати у HTML) */
+.wc-popup-form .wpcf7 h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===== КНОПКА ЗАКРИТТЯ (ХРЕСТИК) ===== */
+
+.wc-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #888;
+  padding: 0;
+}
+
+.wc-popup-close:hover {
+  color: #000;
+}
+
+/* ===== ПОЛЯ ФОРМИ ===== */
+
+.wc-popup-form .wpcf7-form p {
+  margin-bottom: 12px;
+}
+
+.wc-popup-form .wpcf7 label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wc-popup-form .wpcf7 input[type="text"],
+.wc-popup-form .wpcf7 input[type="email"],
+.wc-popup-form .wpcf7 input[type="tel"],
+.wc-popup-form .wpcf7 textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d4d4d4;
+  padding: 8px 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.wc-popup-form .wpcf7 textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Кнопка відправки */
+.wc-popup-form .wpcf7 input[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #007bff; /* підлаштуй під свій бренд */
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.wc-popup-form .wpcf7 input[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Стандартне повідомлення CF7 — можна зробити менш нав'язливим */
+.wc-popup-form .wpcf7-response-output {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* ===== ПОВІДОМЛЕННЯ ПРО УСПІХ ===== */
+
+.wc-popup-success {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.wc-popup-success h3 {
+  color: #28a745;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.wc-popup-success p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.4;
+}
