@@ -2,7 +2,7 @@
   function getState($root){
     var $form = $root.find('#woo-mk-catalog-form');
     var filters = {};
-    $form.find('input[name^="cat["] , input[name^="pa_"]').each(function(){
+    $form.find('input[name^="prod_cat["] , input[name^="pa_"]').each(function(){
       var $el = $(this);
       if ($el.is(':checkbox') && !$el.is(':checked')) return;
       var name = $el.attr('name').replace(/\]$/, '').replace(/\[/, '');

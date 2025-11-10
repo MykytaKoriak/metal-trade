@@ -16,7 +16,14 @@ function woo_mk_catalog_get_price_bounds(){
 
 // Read state
 $qs = wp_unslash($_GET);
-$cats = isset($qs['cat']) ? array_map('intval', (array) $qs['cat']) : [];
+
+$cats = [];
+if (isset($qs['prod_cat'])) {
+  $cats = array_map('intval', (array) $qs['prod_cat']);
+} elseif (isset($qs['cat'])) { // старий варіант, на всякий
+  $cats = array_map('intval', (array) $qs['cat']);
+}
+
 $attrs = [];
 foreach (get_taxonomies(['object_type'=>['product'], 'public'=>true], 'names') as $tx){
   if (strpos($tx, 'pa_') === 0 && isset($qs[$tx])) {
@@ -113,7 +120,7 @@ foreach (get_taxonomies(['object_type'=>['product'], 'public'=>true], 'names') a
           <div class="woo-mk-catalog__filter-list">
             <?php foreach ($cat_terms as $t): ?>
             <label class="woo-mk-catalog__checkbox">
-              <input type="checkbox" name="cat[]" value="<?php echo esc_attr($t->term_id); ?>" <?php checked(in_array($t->term_id, $cats, true)); ?> />
+              <input type="checkbox" name="prod_cat[]" value="<?php echo esc_attr($t->term_id); ?>" <?php checked(in_array($t->term_id, $cats, true)); ?> />
               <span><?php echo esc_html($t->name); ?></span>
             </label>
             <?php endforeach; ?>
