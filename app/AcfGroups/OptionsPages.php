@@ -131,6 +131,13 @@ if( function_exists('acf_add_local_field_group') ):
             ),
             array(
                 array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'product',
+                ),
+            ),
+            array(
+                array(
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'mk-theme-general-settings',
