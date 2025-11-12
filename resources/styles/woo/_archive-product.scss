@@ -8,9 +8,13 @@
   --woo-mk-catalog-accent-600: #1e40af;
   --woo-mk-catalog-card: #f9fafb;
   --woo-mk-catalog-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  background: var(--woo-mk-catalog-bg);
+  border-radius: 18px;
+  box-shadow: var(--woo-mk-catalog-shadow);
+  border: 1px solid var(--woo-mk-catalog-border);
   max-width: 1200px;
   margin: 100px auto 30px auto;
-  padding: 0 16px 48px;
+  padding: 20px 16px 48px;
   color: var(--woo-mk-catalog-text);
 }
 

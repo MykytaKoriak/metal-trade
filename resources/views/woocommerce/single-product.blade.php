@@ -29,8 +29,10 @@
   if (!$delivery_text) {
     $delivery_text = __('Доставляємо по Україні: Нова Пошта, кур\'єр, самовивіз.', 'sage');
   }
-@endphp
-@php
+
+  $form_id = get_field("contact_form_id", get_the_ID());
+  $buy_buttons = get_field("buy_button_list", get_the_ID());
+
   the_widget(
     'HeaderMenuWidget',
     [
@@ -94,11 +96,26 @@
           @endif
 
           <div class="wp-actions">
-            <div class="wp-woo-form">
+            <div class="wp-woo-form" style="
+                    display: flex;
+                    flex-direction: column;">
               {{-- WooCommerce add to cart (simple/variable/grouped are handled automatically) --}}
-              @php woocommerce_template_single_add_to_cart(); @endphp
+              {{--              @php woocommerce_template_single_add_to_cart(); @endphp--}}
+              @foreach($buy_buttons as $button)
+                <a href="{{ $button['market_product_link'] }}" class="wp-btn" style="background-color: {{ $button['button_color'] }};
+                    color: {{ $button['text_color'] }};
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;"
+                   data-action="quote">
+                  <img src="{{ $button['market_image']['url'] }} }}" alt="{{$button['button_text']}}"
+                       style="height: 30px; width: 30px; margin-right: 5px">
+                  {{ __($button['button_text'], 'sage') }}</a>
+
+              @endforeach
             </div>
-            <button type="button" id="order_calculation_form" class="wp-btn" data-action="quote">{{ __('Замовити розрахунок', 'sage') }}</button>
+            <button type="button" id="order_calculation_form" class="wp-btn"
+                    data-action="quote">{{ __('Замовити розрахунок', 'sage') }}</button>
           </div>
 
           <div class="wp-badges">
@@ -109,18 +126,18 @@
           </div>
 
           <div class="wp-tabs" role="tablist">
-            <button class="wp-tab is-active" role="tab" aria-controls="tab-desc"
-                    aria-selected="true">{{ __('Опис', 'sage') }}</button>
-            <button class="wp-tab" role="tab" aria-controls="tab-specs"
-                    aria-selected="false">{{ __('Характеристики', 'sage') }}</button>
+            <button class="wp-tab" role="tab" aria-controls="tab-desc"
+                    aria-selected="false">{{ __('Опис', 'sage') }}</button>
+            <button class="wp-tab is-active" role="tab" aria-controls="tab-specs"
+                    aria-selected="true">{{ __('Характеристики', 'sage') }}</button>
             <button class="wp-tab" role="tab" aria-controls="tab-delivery"
                     aria-selected="false">{{ __('Доставка', 'sage') }}</button>
           </div>
           <div class="wp-tabpanes">
-            <div id="tab-desc" class="wp-pane is-active" role="tabpanel">
+            <div id="tab-desc" class="wp-pane" role="tabpanel">
               {!! $desc !!}
             </div>
-            <div id="tab-specs" class="wp-pane" role="tabpanel">
+            <div id="tab-specs" class="wp-pane is-active" role="tabpanel">
               @foreach($attributes as $attr)
                 @if(method_exists($attr,'is_visible') ? $attr->is_visible() : true)
                   <p>{{ wc_attribute_label($attr->get_name()) }}
